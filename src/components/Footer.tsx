@@ -69,20 +69,20 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Trade Center, Business District<br />
-                  Khartoum, Sudan
+                  KK 325 Street, Kicukiro<br />
+                  Kigali, Rwanda
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 flex-shrink-0" />
-                <a href="tel:+249123456789" className="hover:text-accent transition-colors text-primary-foreground/80">
-                  +249 123 456 789
+                <a href="tel:+250795200389" className="hover:text-accent transition-colors text-primary-foreground/80">
+                  +250 795 200 389
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 flex-shrink-0" />
-                <a href="mailto:info@karrartrading.com" className="hover:text-accent transition-colors text-primary-foreground/80">
-                  info@karrartrading.com
+                <a href="mailto:ahmedkarrar003@gmail.com" className="hover:text-accent transition-colors text-primary-foreground/80">
+                  ahmedkarrar003@gmail.com
                 </a>
               </li>
             </ul>

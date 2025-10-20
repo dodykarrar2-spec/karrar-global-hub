@@ -109,8 +109,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1">Our Office</h3>
                   <p className="text-muted-foreground">
-                    123 Trade Center, Business District<br />
-                    Khartoum, Sudan
+                    KK 325 Street, Kicukiro<br />
+                    Kigali, Rwanda
                   </p>
                 </div>
               </div>
@@ -121,8 +121,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
-                  <a href="tel:+249123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                    +249 123 456 789
+                  <a href="tel:+250795200389" className="text-muted-foreground hover:text-primary transition-colors">
+                    +250 795 200 389
                   </a>
                 </div>
               </div>
@@ -133,8 +133,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <a href="mailto:info@karrartrading.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@karrartrading.com
+                  <a href="mailto:ahmedkarrar003@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    ahmedkarrar003@gmail.com
                   </a>
                 </div>
               </div>
@@ -157,7 +157,7 @@ const Contact = () => {
             {/* Map */}
             <div className="mt-8 rounded-xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242118.31370351866!2d32.323400000000004!3d15.500654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x168e8f6b0000000%3A0x8e3d6f4d3f9d3b4a!2sKhartoum%2C%20Sudan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.5308688808996!2d30.0925!3d-1.9705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0x7de9d8e8e2a9e8a9!2sKicukiro%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -217,7 +217,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   maxLength={20}
-                  placeholder="+249 123 456 789"
+                  placeholder="+250 795 200 389"
                 />
               </div>
 
