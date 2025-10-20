@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Globe, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -8,8 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <Globe className="h-6 w-6" />
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logo} 
+                alt="AHMED Karrar Trading Logo" 
+                className="h-10 w-10 object-contain"
+              />
               <h3 className="text-lg font-bold">AHMED Karrar Trading</h3>
             </div>
             <p className="text-primary-foreground/80 text-sm mb-4">

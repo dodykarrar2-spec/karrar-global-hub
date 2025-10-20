@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +33,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <NavLink to="/" className="flex items-center space-x-3 group">
-            <div className="bg-primary rounded-lg p-2 transition-transform duration-300 group-hover:scale-110">
-              <Globe className="h-6 w-6 text-primary-foreground" />
-            </div>
+            <img 
+              src={logo} 
+              alt="AHMED Karrar Trading Logo" 
+              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
             <div>
               <div className="text-xl font-bold text-primary">AHMED Karrar Trading</div>
               <div className="text-xs text-muted-foreground hidden sm:block">Global Trading Partner</div>
