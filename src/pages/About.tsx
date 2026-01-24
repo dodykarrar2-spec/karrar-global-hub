@@ -2,7 +2,7 @@ import { Target, Eye, Heart, Award } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import aboutImage from "@/assets/about-global.jpg";
-
+import chairmanPhoto from "@/assets/chairman-photo.jpg";
 const About = () => {
   return (
     <div className="min-h-screen">
@@ -76,6 +76,33 @@ const About = () => {
                 Integrity, transparency, customer focus, quality excellence, and building long-term partnerships based on mutual trust and respect.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="section-container">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Our Leadership</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Meet the visionaries driving our success
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-12">
+          <div className="text-center max-w-sm">
+            <div className="mb-6">
+              <img 
+                src={chairmanPhoto} 
+                alt="Ahmed Hassan - Chairman of the Board" 
+                className="w-48 h-48 rounded-full mx-auto object-cover shadow-xl border-4 border-primary/20"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-2">Ahmed Hassan</h3>
+            <p className="text-primary font-semibold mb-3">Chairman of the Board</p>
+            <p className="text-muted-foreground">
+              Leading AHMED Karrar Trading with a vision for excellence and a commitment to building lasting business relationships across continents.
+            </p>
           </div>
         </div>
       </section>
