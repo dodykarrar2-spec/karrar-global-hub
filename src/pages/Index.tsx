@@ -9,6 +9,9 @@ import cropsImage from "@/assets/crops-wheat.jpg";
 import livestockImage from "@/assets/livestock-cattle.jpg";
 import shippingImage from "@/assets/shipping-trade.jpg";
 import produceImage from "@/assets/produce-fresh.jpg";
+import gumArabicImage from "@/assets/gum-arabic.jpg";
+import peanutsImage from "@/assets/peanuts.jpg";
+import frozenMeatImage from "@/assets/frozen-meat.jpg";
 
 const Index = () => {
   return (
@@ -69,6 +72,21 @@ const Index = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
+            {
+              image: gumArabicImage,
+              title: "Gum Arabic",
+              description: "Premium Sudanese gum arabic for food and pharmaceutical industries"
+            },
+            {
+              image: peanutsImage,
+              title: "Peanuts",
+              description: "High-quality groundnuts for export markets worldwide"
+            },
+            {
+              image: frozenMeatImage,
+              title: "Frozen Meat",
+              description: "Premium frozen beef and lamb for international export"
+            },
             {
               image: cropsImage,
               title: "Agricultural Crops",
