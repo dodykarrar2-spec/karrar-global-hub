@@ -5,13 +5,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-trading.jpg";
 import logo from "@/assets/logo.jpg";
-import cropsImage from "@/assets/crops-wheat.jpg";
-import livestockImage from "@/assets/livestock-cattle.jpg";
-import shippingImage from "@/assets/shipping-trade.jpg";
-import produceImage from "@/assets/produce-fresh.jpg";
-import gumArabicImage from "@/assets/gum-arabic.jpg";
-import peanutsImage from "@/assets/peanuts.jpg";
-import frozenMeatImage from "@/assets/frozen-meat.jpg";
+import sheepImage from "@/assets/sheep-export.jpg";
+import camelsImage from "@/assets/camels-export.jpg";
+import cattleImage from "@/assets/cattle-export.jpg";
+import gumArabicImage from "@/assets/gum-arabic-real.jpg";
+import peanutsImage from "@/assets/peanuts-real.jpg";
 
 const Index = () => {
   return (
@@ -70,59 +68,55 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {[
             {
+              image: sheepImage,
+              title: "الضأن",
+              titleEn: "Sheep",
+              description: "أجود أنواع الضأن السوداني للتصدير للأسواق العالمية"
+            },
+            {
+              image: camelsImage,
+              title: "الجمال",
+              titleEn: "Camels",
+              description: "إبل سودانية أصيلة للتصدير إلى دول الخليج والشرق الأوسط"
+            },
+            {
+              image: cattleImage,
+              title: "الأبقار",
+              titleEn: "Cattle",
+              description: "أبقار عالية الجودة من المراعي السودانية الطبيعية"
+            },
+            {
               image: gumArabicImage,
-              title: "Gum Arabic",
-              description: "Premium Sudanese gum arabic for food and pharmaceutical industries"
+              title: "الصمغ العربي",
+              titleEn: "Gum Arabic",
+              description: "صمغ عربي سوداني فاخر للصناعات الغذائية والدوائية"
             },
             {
               image: peanutsImage,
-              title: "Peanuts",
-              description: "High-quality groundnuts for export markets worldwide"
-            },
-            {
-              image: frozenMeatImage,
-              title: "Frozen Meat",
-              description: "Premium frozen beef and lamb for international export"
-            },
-            {
-              image: cropsImage,
-              title: "Agricultural Crops",
-              description: "Premium grains, wheat, and cereals from trusted farms"
-            },
-            {
-              image: livestockImage,
-              title: "Livestock",
-              description: "Quality cattle and livestock for international markets"
-            },
-            {
-              image: produceImage,
-              title: "Fresh Produce",
-              description: "Farm-fresh fruits and vegetables year-round"
-            },
-            {
-              image: shippingImage,
-              title: "Global Logistics",
-              description: "Reliable shipping and trade solutions worldwide"
+              title: "الفول السوداني",
+              titleEn: "Peanuts",
+              description: "فول سوداني عالي الجودة للأسواق التصديرية العالمية"
             }
           ].map((item, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-primary-foreground/90">{item.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground text-center">
+                <h3 className="text-2xl font-bold mb-1">{item.title}</h3>
+                <p className="text-sm font-medium text-primary-foreground/80 mb-2">{item.titleEn}</p>
+                <p className="text-sm text-primary-foreground/90 leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}
