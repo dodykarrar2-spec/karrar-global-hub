@@ -2,36 +2,99 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import constructionImg from "@/assets/product-construction.jpg";
-import electronicsImg from "@/assets/product-electronics.jpg";
-import textilesImg from "@/assets/product-textiles.jpg";
-import agricultureImg from "@/assets/product-agriculture.jpg";
+import { ArrowRight, TrendingUp, TrendingDown, Ship, Package } from "lucide-react";
+import sheepImage from "@/assets/sheep-export.jpg";
+import camelsImage from "@/assets/camels-export.jpg";
+import cattleImage from "@/assets/cattle-export.jpg";
+import gumArabicImage from "@/assets/gum-arabic-real.jpg";
+import peanutsImage from "@/assets/peanuts-real.jpg";
+import logo from "@/assets/logo.jpg";
 
 const Products = () => {
-  const categories = [
+  const services = [
     {
-      title: "Construction Materials",
-      image: constructionImg,
-      description: "High-quality building materials including steel, cement, and industrial components for construction projects.",
-      items: ["Steel & Iron Products", "Cement & Concrete", "Building Hardware", "Industrial Materials"]
+      icon: TrendingUp,
+      title: "التصدير",
+      titleEn: "Export",
+      description: "نصدر أجود المنتجات السودانية إلى الأسواق العالمية",
+      color: "bg-green-500"
     },
     {
-      title: "Electronics & Technology",
-      image: electronicsImg,
-      description: "Latest electronics and technology products from leading manufacturers worldwide.",
-      items: ["Consumer Electronics", "Computer Hardware", "Telecommunications", "Smart Devices"]
+      icon: TrendingDown,
+      title: "الاستيراد",
+      titleEn: "Import",
+      description: "نستورد المنتجات والمعدات من مختلف أنحاء العالم",
+      color: "bg-blue-500"
     },
     {
-      title: "Textiles & Fabrics",
-      image: textilesImg,
-      description: "Premium textiles, fabrics, and garments for both industrial and retail markets.",
-      items: ["Cotton & Synthetic Fabrics", "Ready-Made Garments", "Industrial Textiles", "Home Textiles"]
+      icon: Ship,
+      title: "الشحن والتوصيل",
+      titleEn: "Shipping",
+      description: "خدمات شحن موثوقة إلى جميع الوجهات العالمية",
+      color: "bg-purple-500"
     },
     {
-      title: "Agricultural Products",
-      image: agricultureImg,
-      description: "Fresh and processed agricultural commodities from reliable sources.",
-      items: ["Grains & Cereals", "Coffee & Spices", "Dried Fruits", "Food Commodities"]
+      icon: Package,
+      title: "البيع والشراء",
+      titleEn: "Trading",
+      description: "نشتري ونبيع المواشي والمحاصيل بأفضل الأسعار",
+      color: "bg-orange-500"
+    }
+  ];
+
+  const products = [
+    {
+      image: sheepImage,
+      title: "الضأن",
+      titleEn: "Sheep",
+      description: "أجود أنواع الضأن السوداني للتصدير. نوفر كميات كبيرة للأسواق الخليجية والعربية مع ضمان الجودة والصحة البيطرية.",
+      features: ["تصدير مباشر", "فحص بيطري معتمد", "شحن بحري وجوي", "كميات كبيرة"]
+    },
+    {
+      image: camelsImage,
+      title: "الجمال",
+      titleEn: "Camels",
+      description: "إبل سودانية أصيلة للتصدير إلى دول الخليج والشرق الأوسط. نختار أفضل السلالات مع رعاية صحية كاملة.",
+      features: ["سلالات أصيلة", "رعاية صحية", "توثيق رسمي", "نقل آمن"]
+    },
+    {
+      image: cattleImage,
+      title: "الأبقار",
+      titleEn: "Cattle",
+      description: "أبقار عالية الجودة من المراعي السودانية الطبيعية. نوفر أبقار للتربية والذبح بمواصفات عالمية.",
+      features: ["مراعي طبيعية", "وزن مضمون", "صحة ممتازة", "أسعار تنافسية"]
+    },
+    {
+      image: gumArabicImage,
+      title: "الصمغ العربي",
+      titleEn: "Gum Arabic",
+      description: "صمغ عربي سوداني فاخر للصناعات الغذائية والدوائية. السودان هو المصدر الأول عالمياً للصمغ العربي.",
+      features: ["جودة عالمية", "درجات متعددة", "تغليف مناسب", "شهادات جودة"]
+    },
+    {
+      image: peanutsImage,
+      title: "الفول السوداني",
+      titleEn: "Peanuts",
+      description: "فول سوداني عالي الجودة للأسواق التصديرية العالمية. متوفر بأحجام مختلفة ودرجات نقاء متعددة.",
+      features: ["نقاوة عالية", "تعبئة محكمة", "كميات كبيرة", "أسعار منافسة"]
+    }
+  ];
+
+  const meatProducts = [
+    {
+      title: "لحوم مبردة",
+      titleEn: "Chilled Meat",
+      description: "لحوم طازجة مبردة بأعلى معايير الجودة والنظافة"
+    },
+    {
+      title: "لحوم مجمدة",
+      titleEn: "Frozen Meat",
+      description: "لحوم مجمدة للتصدير مع الحفاظ على القيمة الغذائية"
+    },
+    {
+      title: "لحوم معلبة",
+      titleEn: "Canned Meat",
+      description: "منتجات لحوم معلبة للأسواق المحلية والعالمية"
     }
   ];
 
@@ -40,50 +103,85 @@ const Products = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary-light text-primary-foreground">
-        <div className="section-container">
-          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">Our Products</h1>
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-10 right-10 opacity-10">
+          <img src={logo} alt="" className="w-40 h-40 object-contain" />
+        </div>
+        <div className="section-container relative z-10">
+          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">منتجاتنا وخدماتنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
-            Discover our wide range of high-quality products sourced from trusted suppliers worldwide
+            بيع وشراء وتصدير واستيراد المواشي والمحاصيل الزراعية واللحوم المبردة
           </p>
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Services Grid */}
+      <section className="py-16 bg-muted/30">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">خدماتنا التجارية</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            نقدم خدمات تجارية متكاملة تشمل البيع والشراء والتصدير والاستيراد
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2"
+              >
+                <div className={`${service.color} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
+                  <service.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-1">{service.title}</h3>
+                <p className="text-sm text-primary font-medium mb-3">{service.titleEn}</p>
+                <p className="text-muted-foreground">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Products */}
       <section className="section-container">
+        <h2 className="text-4xl font-bold text-center mb-4">منتجاتنا الرئيسية</h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          نتخصص في تجارة المواشي والمحاصيل الزراعية السودانية عالية الجودة
+        </p>
         <div className="space-y-16">
-          {categories.map((category, index) => (
+          {products.map((product, index) => (
             <div 
               key={index}
-              className={`grid md:grid-cols-2 gap-8 items-center ${
-                index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              }`}
+              className={`grid md:grid-cols-2 gap-8 items-center`}
             >
               <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                <img 
-                  src={category.image} 
-                  alt={category.title}
-                  className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                />
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
               </div>
               <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                <h2 className="text-4xl font-bold mb-4">{category.title}</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  {category.description}
+                <h2 className="text-4xl font-bold mb-2">{product.title}</h2>
+                <p className="text-primary font-medium text-lg mb-4">{product.titleEn}</p>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  {product.description}
                 </p>
-                <div className="space-y-3 mb-6">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center gap-3">
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {product.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3 bg-muted/50 p-3 rounded-lg">
                       <div className="bg-primary rounded-full p-1">
                         <div className="w-2 h-2 bg-primary-foreground rounded-full" />
                       </div>
-                      <span className="text-foreground">{item}</span>
+                      <span className="text-foreground font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
                 <Link to="/contact">
-                  <Button className="btn-primary">
-                    Inquire About {category.title}
+                  <Button className="btn-primary group">
+                    استفسر عن {product.title}
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
               </div>
@@ -92,42 +190,25 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Additional Categories */}
+      {/* Meat Products Section */}
       <section className="bg-muted py-20">
         <div className="section-container">
-          <h2 className="text-4xl font-bold text-center mb-12">More Product Categories</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Industrial Equipment",
-                description: "Machinery and equipment for various industrial applications"
-              },
-              {
-                title: "Automotive Parts",
-                description: "Genuine and aftermarket parts for vehicles and machinery"
-              },
-              {
-                title: "Medical Supplies",
-                description: "Healthcare equipment and medical consumables"
-              },
-              {
-                title: "Chemicals",
-                description: "Industrial and specialty chemicals for various uses"
-              },
-              {
-                title: "Packaging Materials",
-                description: "Comprehensive packaging solutions for all industries"
-              },
-              {
-                title: "Consumer Goods",
-                description: "Wide range of FMCG and consumer products"
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-card p-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground mb-4">{item.description}</p>
-                <Link to="/contact" className="text-primary font-medium hover:underline">
-                  Learn More →
+          <h2 className="text-4xl font-bold text-center mb-4">اللحوم المبردة والمجمدة</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            نوفر اللحوم المبردة والمجمدة بأعلى معايير الجودة للتصدير
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {meatProducts.map((item, index) => (
+              <div key={index} className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
+                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Package className="h-10 w-10 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                <p className="text-primary font-medium mb-4">{item.titleEn}</p>
+                <p className="text-muted-foreground mb-6">{item.description}</p>
+                <Link to="/contact" className="text-primary font-medium hover:underline inline-flex items-center gap-2">
+                  اطلب الآن
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             ))}
@@ -135,18 +216,27 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Custom Orders */}
+      {/* CTA Section */}
       <section className="section-container text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">Can't Find What You're Looking For?</h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            We specialize in sourcing custom products tailored to your specific requirements. Our extensive network of suppliers can help you find exactly what you need.
-          </p>
-          <Link to="/contact">
-            <Button size="lg" className="btn-primary">
-              Request Custom Product Sourcing
-            </Button>
-          </Link>
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-primary to-primary/80 p-12 rounded-3xl text-primary-foreground relative overflow-hidden">
+          <div className="absolute top-5 left-5 opacity-10">
+            <img src={logo} alt="" className="w-24 h-24 object-contain" />
+          </div>
+          <div className="absolute bottom-5 right-5 opacity-10">
+            <img src={logo} alt="" className="w-32 h-32 object-contain" />
+          </div>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-6">هل تبحث عن منتج معين؟</h2>
+            <p className="text-xl text-primary-foreground/90 mb-8">
+              نحن متخصصون في توفير جميع أنواع المواشي والمحاصيل الزراعية. تواصل معنا للحصول على أفضل العروض والأسعار.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary" className="group">
+                تواصل معنا الآن
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
