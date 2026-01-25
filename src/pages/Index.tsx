@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-trading.jpg";
+import logo from "@/assets/logo.jpg";
 import cropsImage from "@/assets/crops-wheat.jpg";
 import livestockImage from "@/assets/livestock-cattle.jpg";
 import shippingImage from "@/assets/shipping-trade.jpg";
@@ -28,6 +29,13 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 section-container text-center text-primary-foreground">
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src={logo} 
+              alt="AHMED Karrar Trading" 
+              className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm"
+            />
+          </div>
           <h1 className="heading-display text-5xl sm:text-6xl lg:text-7xl mb-6 animate-fade-in">
             Connecting Markets,<br />Creating Value
           </h1>
@@ -170,8 +178,22 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-muted py-20">
-        <div className="section-container text-center">
+      <section className="bg-muted py-20 relative overflow-hidden">
+        {/* Decorative Logo Watermarks */}
+        <div className="absolute top-10 left-10 opacity-5">
+          <img src={logo} alt="" className="w-32 h-32 object-contain" />
+        </div>
+        <div className="absolute bottom-10 right-10 opacity-5">
+          <img src={logo} alt="" className="w-40 h-40 object-contain" />
+        </div>
+        <div className="section-container text-center relative z-10">
+          <div className="mb-6">
+            <img 
+              src={logo} 
+              alt="AHMED Karrar Trading" 
+              className="w-16 h-16 mx-auto rounded-full shadow-lg border-2 border-primary/20 object-contain"
+            />
+          </div>
           <h2 className="text-4xl font-bold mb-6">Ready to Expand Your Business?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Partner with AHMED Karrar Trading and unlock new opportunities in international markets.
