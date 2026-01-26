@@ -9,11 +9,11 @@ import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
-  email: z.string().trim().email({ message: "Invalid email address" }).max(255, { message: "Email must be less than 255 characters" }),
-  phone: z.string().trim().min(1, { message: "Phone number is required" }).max(20, { message: "Phone number must be less than 20 characters" }),
-  company: z.string().trim().max(100, { message: "Company name must be less than 100 characters" }).optional(),
-  message: z.string().trim().min(1, { message: "Message is required" }).max(1000, { message: "Message must be less than 1000 characters" })
+  name: z.string().trim().min(1, { message: "الاسم مطلوب" }).max(100, { message: "يجب أن يكون الاسم أقل من 100 حرف" }),
+  email: z.string().trim().email({ message: "عنوان البريد الإلكتروني غير صالح" }).max(255, { message: "يجب أن يكون البريد الإلكتروني أقل من 255 حرف" }),
+  phone: z.string().trim().min(1, { message: "رقم الهاتف مطلوب" }).max(20, { message: "يجب أن يكون رقم الهاتف أقل من 20 حرف" }),
+  company: z.string().trim().max(100, { message: "يجب أن يكون اسم الشركة أقل من 100 حرف" }).optional(),
+  message: z.string().trim().min(1, { message: "الرسالة مطلوبة" }).max(1000, { message: "يجب أن تكون الرسالة أقل من 1000 حرف" })
 });
 
 const Contact = () => {
@@ -39,8 +39,8 @@ const Contact = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+        title: "تم إرسال الرسالة بنجاح!",
+        description: "شكراً لتواصلك معنا. سنرد عليك خلال 24 ساعة.",
       });
 
       // Reset form
@@ -54,14 +54,14 @@ const Contact = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
-          title: "Validation Error",
+          title: "خطأ في التحقق",
           description: error.errors[0].message,
           variant: "destructive",
         });
       } else {
         toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
+          title: "خطأ",
+          description: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
           variant: "destructive",
         });
       }
@@ -78,15 +78,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir="rtl">
       <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary-light text-primary-foreground">
         <div className="section-container">
-          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">Contact Us</h1>
+          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">تواصل معنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
-            Let's start a conversation about your trading needs
+            لنبدأ محادثة حول احتياجاتك التجارية
           </p>
         </div>
       </section>
@@ -96,9 +96,9 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-3xl font-bold mb-6">تواصل معنا</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Have a question or ready to discuss a partnership? We're here to help. Reach out to us through any of the following channels.
+              هل لديك سؤال أو مستعد لمناقشة شراكة؟ نحن هنا للمساعدة. تواصل معنا من خلال أي من القنوات التالية.
             </p>
 
             <div className="space-y-6">
@@ -107,10 +107,10 @@ const Contact = () => {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Our Office</h3>
+                  <h3 className="font-semibold mb-1">مكتبنا</h3>
                   <p className="text-muted-foreground">
-                    KK 325 Street, Kicukiro<br />
-                    Kigali, Rwanda
+                    شارع KK 325، كيكوكيرو<br />
+                    كيغالي، رواندا
                   </p>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
+                  <h3 className="font-semibold mb-1">الهاتف</h3>
                   <a href="tel:+250795200389" className="text-muted-foreground hover:text-primary transition-colors">
                     +250 795 200 389
                   </a>
@@ -132,7 +132,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
+                  <h3 className="font-semibold mb-1">البريد الإلكتروني</h3>
                   <a href="mailto:ahmedkarrar003@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                     ahmedkarrar003@gmail.com
                   </a>
@@ -144,11 +144,11 @@ const Contact = () => {
                   <Clock className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Business Hours</h3>
+                  <h3 className="font-semibold mb-1">ساعات العمل</h3>
                   <p className="text-muted-foreground">
-                    Sunday - Thursday: 9:00 AM - 6:00 PM<br />
-                    Saturday: 9:00 AM - 2:00 PM<br />
-                    Friday: Closed
+                    الأحد - الخميس: 9:00 ص - 6:00 م<br />
+                    السبت: 9:00 ص - 2:00 م<br />
+                    الجمعة: مغلق
                   </p>
                 </div>
               </div>
@@ -164,18 +164,18 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="AHMED Karrar Trading Location"
+                title="موقع أحمد كرار للتجارة"
               />
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="card-elegant">
-            <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
+            <h2 className="text-3xl font-bold mb-6">أرسل لنا رسالة</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Full Name *
+                  الاسم الكامل *
                 </label>
                 <Input
                   id="name"
@@ -185,13 +185,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   maxLength={100}
-                  placeholder="John Doe"
+                  placeholder="أحمد محمد"
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email Address *
+                  البريد الإلكتروني *
                 </label>
                 <Input
                   id="email"
@@ -201,13 +201,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   maxLength={255}
-                  placeholder="john@example.com"
+                  placeholder="ahmed@example.com"
                 />
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Phone Number *
+                  رقم الهاتف *
                 </label>
                 <Input
                   id="phone"
@@ -223,7 +223,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company Name (Optional)
+                  اسم الشركة (اختياري)
                 </label>
                 <Input
                   id="company"
@@ -232,13 +232,13 @@ const Contact = () => {
                   value={formData.company}
                   onChange={handleChange}
                   maxLength={100}
-                  placeholder="Your Company"
+                  placeholder="شركتك"
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message *
+                  الرسالة *
                 </label>
                 <Textarea
                   id="message"
@@ -248,10 +248,10 @@ const Contact = () => {
                   required
                   maxLength={1000}
                   rows={5}
-                  placeholder="Tell us about your trading needs..."
+                  placeholder="أخبرنا عن احتياجاتك التجارية..."
                 />
                 <p className="text-xs text-muted-foreground mt-1">
-                  {formData.message.length}/1000 characters
+                  {formData.message.length}/1000 حرف
                 </p>
               </div>
 
@@ -260,7 +260,7 @@ const Contact = () => {
                 className="w-full btn-primary"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
               </Button>
             </form>
           </div>

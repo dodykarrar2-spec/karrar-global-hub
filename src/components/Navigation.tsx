@@ -17,11 +17,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" },
+    { name: "الرئيسية", path: "/" },
+    { name: "من نحن", path: "/about" },
+    { name: "خدماتنا", path: "/services" },
+    { name: "المنتجات", path: "/products" },
+    { name: "تواصل معنا", path: "/contact" },
   ];
 
   return (
@@ -29,23 +29,24 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
+      dir="rtl"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <NavLink to="/" className="flex items-center space-x-3 group">
+          <NavLink to="/" className="flex items-center space-x-3 space-x-reverse group">
             <img 
               src={logo} 
-              alt="AHMED Karrar Trading Logo" 
+              alt="شعار أحمد كرار للتجارة" 
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <div>
-              <div className="text-xl font-bold text-primary">AHMED Karrar Trading</div>
-              <div className="text-xs text-muted-foreground hidden sm:block">Global Trading Partner</div>
+              <div className="text-xl font-bold text-primary">أحمد كرار للتجارة</div>
+              <div className="text-xs text-muted-foreground hidden sm:block">شريكك التجاري العالمي</div>
             </div>
           </NavLink>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 space-x-reverse">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
