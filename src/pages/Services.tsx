@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 
 const Services = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir="rtl">
       <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary-light text-primary-foreground">
         <div className="section-container">
-          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">Our Services</h1>
+          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">خدماتنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
-            Comprehensive trading solutions tailored to your business needs
+            حلول تجارية شاملة مصممة لتلبية احتياجات عملك
           </p>
         </div>
       </section>
@@ -27,17 +27,17 @@ const Services = () => {
             <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
               <Ship className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Import Services</h2>
+            <h2 className="text-3xl font-bold mb-4">خدمات الاستيراد</h2>
             <p className="text-muted-foreground mb-6">
-              We source high-quality products from trusted international suppliers, ensuring compliance with all regulatory requirements and quality standards.
+              نوفر منتجات عالية الجودة من موردين دوليين موثوقين، مع ضمان الامتثال لجميع المتطلبات التنظيمية ومعايير الجودة.
             </p>
             <ul className="space-y-3">
               {[
-                "Product sourcing from verified suppliers",
-                "Quality inspection and certification",
-                "Customs clearance and documentation",
-                "Competitive shipping rates",
-                "Door-to-door delivery options"
+                "توريد المنتجات من موردين معتمدين",
+                "فحص الجودة والشهادات",
+                "التخليص الجمركي والتوثيق",
+                "أسعار شحن تنافسية",
+                "خيارات التسليم من الباب إلى الباب"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="bg-primary rounded-full p-1 mt-0.5">
@@ -54,17 +54,17 @@ const Services = () => {
             <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
               <Package className="h-8 w-8 text-accent" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Export Services</h2>
+            <h2 className="text-3xl font-bold mb-4">خدمات التصدير</h2>
             <p className="text-muted-foreground mb-6">
-              Connect your products with international markets. We handle all aspects of the export process, from documentation to final delivery.
+              اربط منتجاتك بالأسواق الدولية. نتولى جميع جوانب عملية التصدير، من التوثيق إلى التسليم النهائي.
             </p>
             <ul className="space-y-3">
               {[
-                "Market research and buyer identification",
-                "Export documentation and licensing",
-                "International shipping coordination",
-                "Payment processing and trade finance",
-                "After-sales support and tracking"
+                "بحث السوق وتحديد المشترين",
+                "توثيق التصدير والتراخيص",
+                "تنسيق الشحن الدولي",
+                "معالجة المدفوعات والتمويل التجاري",
+                "دعم ما بعد البيع والتتبع"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="bg-accent rounded-full p-1 mt-0.5">
@@ -81,17 +81,17 @@ const Services = () => {
             <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
               <Truck className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Logistics Management</h2>
+            <h2 className="text-3xl font-bold mb-4">إدارة اللوجستيات</h2>
             <p className="text-muted-foreground mb-6">
-              End-to-end supply chain solutions that ensure your products reach their destination safely, on time, and cost-effectively.
+              حلول سلسلة توريد شاملة تضمن وصول منتجاتك إلى وجهتها بأمان وفي الوقت المحدد وبتكلفة فعالة.
             </p>
             <ul className="space-y-3">
               {[
-                "Sea, air, and land freight options",
-                "Warehousing and storage solutions",
-                "Inventory management",
-                "Real-time shipment tracking",
-                "Last-mile delivery coordination"
+                "خيارات الشحن البحري والجوي والبري",
+                "حلول التخزين والمستودعات",
+                "إدارة المخزون",
+                "تتبع الشحنات في الوقت الفعلي",
+                "تنسيق التسليم للميل الأخير"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="bg-primary rounded-full p-1 mt-0.5">
@@ -108,17 +108,17 @@ const Services = () => {
             <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
               <Search className="h-8 w-8 text-accent" />
             </div>
-            <h2 className="text-3xl font-bold mb-4">Product Sourcing</h2>
+            <h2 className="text-3xl font-bold mb-4">توريد المنتجات</h2>
             <p className="text-muted-foreground mb-6">
-              Leverage our extensive network to find the right products at the right price, with quality guaranteed.
+              استفد من شبكتنا الواسعة للعثور على المنتجات المناسبة بالسعر المناسب، مع ضمان الجودة.
             </p>
             <ul className="space-y-3">
               {[
-                "Supplier verification and evaluation",
-                "Price negotiation and comparison",
-                "Sample procurement and testing",
-                "Customization and OEM services",
-                "Ongoing supplier relationship management"
+                "التحقق من الموردين وتقييمهم",
+                "التفاوض على الأسعار والمقارنة",
+                "الحصول على العينات واختبارها",
+                "خدمات التخصيص والتصنيع",
+                "إدارة علاقات الموردين المستمرة"
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <div className="bg-accent rounded-full p-1 mt-0.5">
@@ -135,23 +135,23 @@ const Services = () => {
       {/* Additional Services */}
       <section className="bg-muted py-20">
         <div className="section-container">
-          <h2 className="text-4xl font-bold text-center mb-12">Additional Services</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">خدمات إضافية</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: Shield,
-                title: "Quality Assurance",
-                description: "Comprehensive quality control and product inspection services"
+                title: "ضمان الجودة",
+                description: "خدمات شاملة لمراقبة الجودة وفحص المنتجات"
               },
               {
                 icon: TrendingUp,
-                title: "Market Analysis",
-                description: "In-depth market research and trade opportunity identification"
+                title: "تحليل السوق",
+                description: "أبحاث سوق متعمقة وتحديد الفرص التجارية"
               },
               {
                 icon: Package,
-                title: "Custom Solutions",
-                description: "Tailored trading solutions designed for your specific needs"
+                title: "حلول مخصصة",
+                description: "حلول تجارية مصممة خصيصاً لاحتياجاتك المحددة"
               }
             ].map((service, index) => (
               <div key={index} className="bg-card p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300">
@@ -168,13 +168,13 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="section-container text-center">
-        <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+        <h2 className="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Contact us today to discuss how we can support your international trading needs.
+          تواصل معنا اليوم لمناقشة كيف يمكننا دعم احتياجاتك التجارية الدولية.
         </p>
         <Link to="/contact">
           <Button size="lg" className="btn-primary">
-            Request a Quote
+            اطلب عرض سعر
           </Button>
         </Link>
       </section>

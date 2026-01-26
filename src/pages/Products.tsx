@@ -99,7 +99,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir="rtl">
       <Navigation />
 
       {/* Hero Section */}
@@ -181,7 +181,7 @@ const Products = () => {
                 <Link to="/contact">
                   <Button className="btn-primary group">
                     استفسر عن {product.title}
-                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1 rotate-180" />
                   </Button>
                 </Link>
               </div>
@@ -208,7 +208,7 @@ const Products = () => {
                 <p className="text-muted-foreground mb-6">{item.description}</p>
                 <Link to="/contact" className="text-primary font-medium hover:underline inline-flex items-center gap-2">
                   اطلب الآن
-                  <ArrowRight className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4 rotate-180" />
                 </Link>
               </div>
             ))}
@@ -233,7 +233,7 @@ const Products = () => {
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="group">
                 تواصل معنا الآن
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1 rotate-180" />
               </Button>
             </Link>
           </div>

@@ -3,17 +3,18 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import aboutImage from "@/assets/about-global.jpg";
 import chairmanPhoto from "@/assets/chairman-photo.jpg";
+
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir="rtl">
       <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary-light text-primary-foreground">
         <div className="section-container">
-          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">About Us</h1>
+          <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">من نحن</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
-            Building bridges between businesses and markets across continents
+            نبني جسوراً بين الشركات والأسواق عبر القارات
           </p>
         </div>
       </section>
@@ -22,21 +23,21 @@ const About = () => {
       <section className="section-container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6">Who We Are</h2>
+            <h2 className="text-4xl font-bold mb-6">من نحن</h2>
             <p className="text-lg text-muted-foreground mb-4">
-              AHMED Karrar Trading is a dynamic international trading company specializing in import, export, and general trading services. We connect businesses across borders, focusing on high-quality products, reliable supply chains, and strong partnerships.
+              أحمد كرار للتجارة هي شركة تجارة دولية ديناميكية متخصصة في خدمات الاستيراد والتصدير والتجارة العامة. نربط الشركات عبر الحدود، مع التركيز على المنتجات عالية الجودة وسلاسل التوريد الموثوقة والشراكات القوية.
             </p>
             <p className="text-lg text-muted-foreground mb-4">
-              With extensive experience in the African, Middle Eastern, and Asian markets, we have built a reputation for excellence, reliability, and integrity in all our business dealings.
+              مع خبرة واسعة في الأسواق الأفريقية والشرق أوسطية والآسيوية، بنينا سمعة راسخة في التميز والموثوقية والنزاهة في جميع تعاملاتنا التجارية.
             </p>
             <p className="text-lg text-muted-foreground">
-              Our commitment to quality and customer satisfaction has made us a trusted partner for businesses looking to expand their global reach.
+              التزامنا بالجودة ورضا العملاء جعلنا شريكاً موثوقاً للشركات التي تسعى لتوسيع نطاقها العالمي.
             </p>
           </div>
           <div className="relative">
             <img 
               src={aboutImage} 
-              alt="Global trading network" 
+              alt="شبكة التجارة العالمية" 
               className="rounded-2xl shadow-2xl"
             />
           </div>
@@ -51,9 +52,9 @@ const About = () => {
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-4">مهمتنا</h3>
               <p className="text-muted-foreground">
-                To facilitate seamless international trade by connecting quality suppliers with reliable buyers, ensuring mutual growth and sustainable business relationships.
+                تسهيل التجارة الدولية السلسة من خلال ربط الموردين ذوي الجودة بالمشترين الموثوقين، مما يضمن النمو المتبادل وعلاقات تجارية مستدامة.
               </p>
             </div>
 
@@ -61,9 +62,9 @@ const About = () => {
               <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Eye className="h-8 w-8 text-accent" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold mb-4">رؤيتنا</h3>
               <p className="text-muted-foreground">
-                To become the leading trading partner in Africa, the Middle East, and Asia, recognized for our integrity, efficiency, and commitment to excellence.
+                أن نصبح الشريك التجاري الرائد في أفريقيا والشرق الأوسط وآسيا، معروفين بنزاهتنا وكفاءتنا والتزامنا بالتميز.
               </p>
             </div>
 
@@ -71,9 +72,9 @@ const About = () => {
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Our Values</h3>
+              <h3 className="text-2xl font-bold mb-4">قيمنا</h3>
               <p className="text-muted-foreground">
-                Integrity, transparency, customer focus, quality excellence, and building long-term partnerships based on mutual trust and respect.
+                النزاهة، الشفافية، التركيز على العملاء، التميز في الجودة، وبناء شراكات طويلة الأمد قائمة على الثقة والاحترام المتبادل.
               </p>
             </div>
           </div>
@@ -83,9 +84,9 @@ const About = () => {
       {/* Leadership Team */}
       <section className="section-container">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Our Leadership</h2>
+          <h2 className="text-4xl font-bold mb-4">قيادتنا</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Meet the visionaries driving our success
+            تعرف على أصحاب الرؤية الذين يقودون نجاحنا
           </p>
         </div>
 
@@ -94,14 +95,14 @@ const About = () => {
             <div className="mb-6">
               <img 
                 src={chairmanPhoto} 
-                alt="Ahmed Hassan - Chairman of the Board" 
+                alt="أحمد حسن - رئيس مجلس الإدارة" 
                 className="w-48 h-48 rounded-full mx-auto object-cover shadow-xl border-4 border-primary/20"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-2">Ahmed Hassan</h3>
-            <p className="text-primary font-semibold mb-3">Chairman of the Board</p>
+            <h3 className="text-2xl font-bold mb-2">أحمد حسن</h3>
+            <p className="text-primary font-semibold mb-3">رئيس مجلس الإدارة</p>
             <p className="text-muted-foreground">
-              Leading AHMED Karrar Trading with a vision for excellence and a commitment to building lasting business relationships across continents.
+              يقود أحمد كرار للتجارة برؤية للتميز والتزام ببناء علاقات تجارية دائمة عبر القارات.
             </p>
           </div>
         </div>
@@ -110,37 +111,37 @@ const About = () => {
       {/* Why Choose Us */}
       <section className="section-container">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Why Partner With Us?</h2>
+          <h2 className="text-4xl font-bold mb-4">لماذا تشاركنا؟</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We bring experience, reliability, and a commitment to your success
+            نجلب الخبرة والموثوقية والالتزام بنجاحك
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: "Extensive Market Knowledge",
-              description: "Deep understanding of African, Middle Eastern, and Asian markets with local expertise."
+              title: "معرفة واسعة بالسوق",
+              description: "فهم عميق للأسواق الأفريقية والشرق أوسطية والآسيوية مع خبرة محلية."
             },
             {
-              title: "Quality Assurance",
-              description: "Rigorous quality control processes to ensure product standards meet international requirements."
+              title: "ضمان الجودة",
+              description: "عمليات رقابة جودة صارمة لضمان أن معايير المنتجات تلبي المتطلبات الدولية."
             },
             {
-              title: "Competitive Pricing",
-              description: "Strong supplier relationships enable us to offer competitive rates without compromising quality."
+              title: "أسعار تنافسية",
+              description: "علاقات قوية مع الموردين تمكننا من تقديم أسعار تنافسية دون المساومة على الجودة."
             },
             {
-              title: "Reliable Logistics",
-              description: "Efficient supply chain management ensuring timely delivery and transparent tracking."
+              title: "لوجستيات موثوقة",
+              description: "إدارة سلسلة توريد فعالة تضمن التسليم في الوقت المحدد والتتبع الشفاف."
             },
             {
-              title: "Personalized Service",
-              description: "Dedicated account managers who understand your business needs and provide tailored solutions."
+              title: "خدمة شخصية",
+              description: "مديرو حسابات مخصصون يفهمون احتياجات عملك ويقدمون حلولاً مخصصة."
             },
             {
-              title: "Global Network",
-              description: "Established connections with trusted suppliers and logistics partners worldwide."
+              title: "شبكة عالمية",
+              description: "اتصالات راسخة مع موردين موثوقين وشركاء لوجستيين حول العالم."
             }
           ].map((item, index) => (
             <div key={index} className="flex gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300">
