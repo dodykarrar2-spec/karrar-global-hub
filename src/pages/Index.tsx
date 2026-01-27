@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-trading.jpg";
+import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
 import camelsImage from "@/assets/camels-export.jpg";
@@ -23,10 +23,10 @@ const Index = () => {
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'center top',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 to-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/75 to-primary/60" />
         </div>
         
         <div className="relative z-10 section-container text-center text-primary-foreground">
