@@ -8,6 +8,14 @@ import camelsImage from "@/assets/camels-export.jpg";
 import cattleImage from "@/assets/cattle-export.jpg";
 import gumArabicImage from "@/assets/gum-arabic-real.jpg";
 import peanutsImage from "@/assets/peanuts-real.jpg";
+import cottonImage from "@/assets/cotton.png";
+import sunflowerImage from "@/assets/sunflower-seeds.png";
+import sesameImage from "@/assets/sesame.png";
+import redOnionImage from "@/assets/red-onion.png";
+import frozenMeatImage from "@/assets/frozen-meat-new.png";
+import alfalfaImage from "@/assets/alfalfa.png";
+import hibiscusImage from "@/assets/hibiscus.png";
+import watermelonSeedsImage from "@/assets/watermelon-seeds.png";
 import logo from "@/assets/logo.jpg";
 
 const Products = () => {
@@ -42,7 +50,7 @@ const Products = () => {
     }
   ];
 
-  const products = [
+  const livestockProducts = [
     {
       image: sheepImage,
       title: "الضأن",
@@ -63,35 +71,81 @@ const Products = () => {
       titleEn: "Cattle",
       description: "أبقار عالية الجودة من المراعي السودانية الطبيعية. نوفر أبقار للتربية والذبح بمواصفات عالمية.",
       features: ["مراعي طبيعية", "وزن مضمون", "صحة ممتازة", "أسعار تنافسية"]
-    },
+    }
+  ];
+
+  const agriculturalProducts = [
     {
       image: gumArabicImage,
       title: "الصمغ العربي",
       titleEn: "Gum Arabic",
-      description: "صمغ عربي سوداني فاخر للصناعات الغذائية والدوائية. السودان هو المصدر الأول عالمياً للصمغ العربي.",
-      features: ["جودة عالمية", "درجات متعددة", "تغليف مناسب", "شهادات جودة"]
+      description: "صمغ عربي سوداني فاخر للصناعات الغذائية والدوائية. السودان هو المصدر الأول عالمياً للصمغ العربي."
     },
     {
       image: peanutsImage,
       title: "الفول السوداني",
       titleEn: "Peanuts",
-      description: "فول سوداني عالي الجودة للأسواق التصديرية العالمية. متوفر بأحجام مختلفة ودرجات نقاء متعددة.",
-      features: ["نقاوة عالية", "تعبئة محكمة", "كميات كبيرة", "أسعار منافسة"]
+      description: "فول سوداني عالي الجودة للأسواق التصديرية العالمية. متوفر بأحجام مختلفة ودرجات نقاء متعددة."
+    },
+    {
+      image: cottonImage,
+      title: "القطن",
+      titleEn: "Cotton",
+      description: "قطن سوداني فاخر طويل التيلة للصناعات النسيجية العالمية. جودة عالية ونقاء استثنائي."
+    },
+    {
+      image: sesameImage,
+      title: "السمسم",
+      titleEn: "Sesame",
+      description: "سمسم سوداني عالي الجودة للتصدير. مثالي لاستخراج الزيوت والصناعات الغذائية."
+    },
+    {
+      image: sunflowerImage,
+      title: "زهرة الشمس",
+      titleEn: "Sunflower Seeds",
+      description: "بذور زهرة الشمس الفاخرة للتصدير. مصدر ممتاز للزيوت الطبيعية والاستخدامات الغذائية."
+    },
+    {
+      image: hibiscusImage,
+      title: "الكركدي",
+      titleEn: "Hibiscus",
+      description: "كركدي سوداني فاخر معروف عالمياً بجودته العالية. يستخدم في المشروبات والصناعات الدوائية."
+    },
+    {
+      image: watermelonSeedsImage,
+      title: "حب البطيخ",
+      titleEn: "Watermelon Seeds",
+      description: "حب البطيخ السوداني الفاخر للتصدير. منتج تقليدي عالي القيمة الغذائية."
+    },
+    {
+      image: redOnionImage,
+      title: "البصل الأحمر",
+      titleEn: "Red Onion",
+      description: "بصل أحمر سوداني طازج للتصدير. جودة ممتازة وطعم مميز للأسواق العالمية."
+    },
+    {
+      image: alfalfaImage,
+      title: "البرسيم",
+      titleEn: "Alfalfa",
+      description: "برسيم سوداني عالي الجودة للتصدير. علف ممتاز للمواشي غني بالبروتين والعناصر الغذائية."
     }
   ];
 
   const meatProducts = [
     {
+      image: frozenMeatImage,
       title: "لحوم مبردة",
       titleEn: "Chilled Meat",
       description: "لحوم طازجة مبردة بأعلى معايير الجودة والنظافة"
     },
     {
+      image: frozenMeatImage,
       title: "لحوم مجمدة",
       titleEn: "Frozen Meat",
       description: "لحوم مجمدة للتصدير مع الحفاظ على القيمة الغذائية"
     },
     {
+      image: frozenMeatImage,
       title: "لحوم معلبة",
       titleEn: "Canned Meat",
       description: "منتجات لحوم معلبة للأسواق المحلية والعالمية"
@@ -140,14 +194,14 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Main Products */}
+      {/* Livestock Products */}
       <section className="section-container">
-        <h2 className="text-4xl font-bold text-center mb-4">منتجاتنا الرئيسية</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">المواشي</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          نتخصص في تجارة المواشي والمحاصيل الزراعية السودانية عالية الجودة
+          نتخصص في تجارة وتصدير المواشي السودانية عالية الجودة
         </p>
         <div className="space-y-16">
-          {products.map((product, index) => (
+          {livestockProducts.map((product, index) => (
             <div 
               key={index}
               className={`grid md:grid-cols-2 gap-8 items-center`}
@@ -190,19 +244,59 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Meat Products Section */}
+      {/* Agricultural Products Grid */}
       <section className="bg-muted py-20">
         <div className="section-container">
-          <h2 className="text-4xl font-bold text-center mb-4">اللحوم المبردة والمجمدة</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">المحاصيل الزراعية</h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            نوفر اللحوم المبردة والمجمدة بأعلى معايير الجودة للتصدير
+            نصدر أجود المحاصيل الزراعية السودانية إلى الأسواق العالمية
           </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            {meatProducts.map((item, index) => (
-              <div key={index} className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
-                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Package className="h-10 w-10 text-primary" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {agriculturalProducts.map((product, index) => (
+              <div 
+                key={index} 
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-card"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+                  <h3 className="text-2xl font-bold mb-1">{product.title}</h3>
+                  <p className="text-sm text-primary-foreground/80 font-medium mb-3">{product.titleEn}</p>
+                  <p className="text-sm text-primary-foreground/90 leading-relaxed line-clamp-3">{product.description}</p>
+                  <Link to="/contact" className="mt-4 inline-flex items-center gap-2 text-white font-medium hover:underline">
+                    استفسر الآن
+                    <ArrowRight className="h-4 w-4 rotate-180" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Meat Products Section */}
+      <section className="section-container">
+        <h2 className="text-4xl font-bold text-center mb-4">اللحوم المبردة والمجمدة</h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          نوفر اللحوم المبردة والمجمدة بأعلى معايير الجودة للتصدير
+        </p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {meatProducts.map((item, index) => (
+            <div key={index} className="bg-card rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 text-center">
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                 <p className="text-primary font-medium mb-4">{item.titleEn}</p>
                 <p className="text-muted-foreground mb-6">{item.description}</p>
@@ -211,8 +305,8 @@ const Products = () => {
                   <ArrowRight className="h-4 w-4 rotate-180" />
                 </Link>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
