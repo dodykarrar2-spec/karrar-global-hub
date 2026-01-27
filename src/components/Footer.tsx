@@ -17,6 +17,9 @@ const Footer = () => {
               />
               <h3 className="text-lg font-bold">أحمد كرار للتجارة</h3>
             </div>
+            <p className="text-primary-foreground/70 text-sm mb-3 font-['Amiri',serif] italic leading-relaxed">
+              "هب يا كريم بلا مقدار لعبدك أحمد الكرار"
+            </p>
             <p className="text-primary-foreground/80 text-sm mb-4">
               شريكك الموثوق في التجارة الدولية. نربط الأسواق ونصنع القيمة عبر أفريقيا والشرق الأوسط وآسيا.
             </p>
