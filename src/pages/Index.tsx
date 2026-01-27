@@ -200,6 +200,9 @@ const Index = () => {
               className="w-16 h-16 mx-auto rounded-full shadow-lg border-2 border-primary/20 object-contain"
             />
           </div>
+          <p className="text-lg text-primary/70 mb-4 font-['Amiri',serif] italic">
+            "هب يا كريم بلا مقدار لعبدك أحمد الكرار"
+          </p>
           <h2 className="text-4xl font-bold mb-6">هل أنت مستعد لتوسيع أعمالك؟</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             تشارك مع أحمد كرار للتجارة واكتشف فرصاً جديدة في الأسواق الدولية.
