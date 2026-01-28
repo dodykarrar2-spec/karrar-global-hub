@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-import heroImage from "@/assets/hero-agricultural.png";
+import heroImage from "@/assets/hero-gum-arabic.png";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "الاسم مطلوب" }).max(100, { message: "يجب أن يكون الاسم أقل من 100 حرف" }),

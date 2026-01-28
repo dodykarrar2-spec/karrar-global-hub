@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-agricultural.png";
+import heroImage from "@/assets/hero-legumes.png";
 
 const Services = () => {
   return (

@@ -17,7 +17,7 @@ import alfalfaImage from "@/assets/alfalfa.png";
 import hibiscusImage from "@/assets/hibiscus.png";
 import watermelonSeedsImage from "@/assets/watermelon-seeds.png";
 import logo from "@/assets/logo.jpg";
-import heroImage from "@/assets/hero-agricultural.png";
+import heroImage from "@/assets/hero-sheep.png";
 
 const Products = () => {
   const services = [
