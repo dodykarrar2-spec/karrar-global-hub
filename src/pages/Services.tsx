@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-agricultural.png";
 
 const Services = () => {
   return (
@@ -10,8 +11,18 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary-light text-primary-foreground">
-        <div className="section-container">
+      <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/80 to-primary/70" />
+        </div>
+        <div className="section-container relative z-10">
           <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">خدماتنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
             حلول تجارية شاملة مصممة لتلبية احتياجات عملك
