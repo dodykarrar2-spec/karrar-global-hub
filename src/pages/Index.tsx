@@ -19,7 +19,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 animate-hero-zoom"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
