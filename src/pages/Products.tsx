@@ -17,6 +17,7 @@ import alfalfaImage from "@/assets/alfalfa.png";
 import hibiscusImage from "@/assets/hibiscus.png";
 import watermelonSeedsImage from "@/assets/watermelon-seeds.png";
 import logo from "@/assets/logo.jpg";
+import heroImage from "@/assets/hero-agricultural.png";
 
 const Products = () => {
   const services = [
@@ -157,8 +158,18 @@ const Products = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-10 right-10 opacity-10">
+      <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/80 to-primary/70" />
+        </div>
+        <div className="absolute top-10 right-10 opacity-10 z-10">
           <img src={logo} alt="" className="w-40 h-40 object-contain" />
         </div>
         <div className="section-container relative z-10">
