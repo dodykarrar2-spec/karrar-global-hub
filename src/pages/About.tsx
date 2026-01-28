@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import aboutImage from "@/assets/about-global.jpg";
 import chairmanPhoto from "@/assets/chairman-photo.jpg";
-import heroImage from "@/assets/hero-agricultural.png";
+import heroImage from "@/assets/hero-camels.png";
 
 const About = () => {
   return (
