@@ -11,6 +11,7 @@ import camelsImage from "@/assets/camels-export.jpg";
 import cattleImage from "@/assets/cattle-export.jpg";
 import gumArabicImage from "@/assets/gum-arabic-real.jpg";
 import peanutsImage from "@/assets/peanuts-real.jpg";
+import businessSectorsBg from "@/assets/business-sectors-bg.jpg";
 
 const Index = () => {
   return (
@@ -110,13 +111,27 @@ const Index = () => {
       </section>
 
       {/* Business Sectors Section */}
-      <section className="section-container">
-        <AnimatedSection animation="fade-up" className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">قطاعات الأعمال</h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            تضم أحمد كرار للتجارة وحدات أعمال متكاملة تعمل معًا لتحقيق خطتها الاستراتيجية وتعزيز الصادرات. تشمل هذه الوحدات خدمات الاستشارات التجارية، والتسويق الدولي، وتطوير سلاسل الإمداد، والدعم اللوجستي، وبحوث الأسواق. تهدف المجموعة إلى تمكين الشركات من الوصول إلى الأسواق العالمية عبر حلول مبتكرة تعمل المجموعة وفق أحدث المعايير الدولية لضمان تحقيق نمو مستدام في قطاع الصادرات
-          </p>
-        </AnimatedSection>
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${businessSectorsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection animation="fade-up" className="text-center">
+            <h2 className="text-4xl font-bold mb-6 text-primary-foreground">قطاعات الأعمال</h2>
+            <p className="text-xl text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
+              تضم أحمد كرار للتجارة وحدات أعمال متكاملة تعمل معًا لتحقيق خطتها الاستراتيجية وتعزيز الصادرات. تشمل هذه الوحدات خدمات الاستشارات التجارية، والتسويق الدولي، وتطوير سلاسل الإمداد، والدعم اللوجستي، وبحوث الأسواق. تهدف المجموعة إلى تمكين الشركات من الوصول إلى الأسواق العالمية عبر حلول مبتكرة تعمل المجموعة وفق أحدث المعايير الدولية لضمان تحقيق نمو مستدام في قطاع الصادرات
+            </p>
+          </AnimatedSection>
+        </div>
       </section>
 
       {/* What We Trade Section */}
