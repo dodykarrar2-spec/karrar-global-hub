@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -61,12 +62,12 @@ const Index = () => {
 
       {/* Values Section */}
       <section className="section-container bg-muted/30">
-        <div className="text-center mb-12">
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">قيمنا التي نعتز بها</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             تضم الهيئة الاستشارية لأحمد كرار للتجارة نخبة من الخبراء والمتخصصين، الذين يقدمون رؤى استراتيجية وحلول مبتكرة لدعم تطور المجموعة وتعزيز تنافسيتها في الأسواق المحلية والدولية
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {[
@@ -91,38 +92,41 @@ const Index = () => {
               description: "تعزيز الممارسات المميزة في التعامل مع البيئة والصحة والسلامة للعاملين والمساهمة في التنمية المستدامة"
             }
           ].map((value, index) => (
-            <div 
+            <AnimatedSection 
               key={index} 
-              className="card-elegant text-center group"
+              animation="fade-up"
+              delay={index * 100}
             >
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                <value.icon className="h-8 w-8 text-primary" />
+              <div className="card-elegant text-center group h-full">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                  <value.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
       {/* Business Sectors Section */}
       <section className="section-container">
-        <div className="text-center mb-12">
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">قطاعات الأعمال</h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             تضم أحمد كرار للتجارة وحدات أعمال متكاملة تعمل معًا لتحقيق خطتها الاستراتيجية وتعزيز الصادرات. تشمل هذه الوحدات خدمات الاستشارات التجارية، والتسويق الدولي، وتطوير سلاسل الإمداد، والدعم اللوجستي، وبحوث الأسواق. تهدف المجموعة إلى تمكين الشركات من الوصول إلى الأسواق العالمية عبر حلول مبتكرة تعمل المجموعة وفق أحدث المعايير الدولية لضمان تحقيق نمو مستدام في قطاع الصادرات
           </p>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* What We Trade Section */}
       <section className="section-container bg-muted/30">
-        <div className="text-center mb-12">
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">ما نتاجر به</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             منتجات متميزة من أفضل الموردين في أفريقيا والشرق الأوسط وآسيا.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {[
@@ -152,44 +156,47 @@ const Index = () => {
               description: "فول سوداني عالي الجودة للأسواق التصديرية العالمية"
             }
           ].map((item, index) => (
-            <div 
+            <AnimatedSection 
               key={index} 
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              animation="scale"
+              delay={index * 100}
             >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground text-center">
+                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-sm text-primary-foreground/90 leading-relaxed">{item.description}</p>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground text-center">
-                <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-sm text-primary-foreground/90 leading-relaxed">{item.description}</p>
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        <AnimatedSection animation="fade-up" delay={500} className="text-center mt-10">
           <Link to="/products">
             <Button size="lg" variant="outline" className="group">
               عرض جميع المنتجات
               <ArrowRight className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1 rotate-180" />
             </Button>
           </Link>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Features Section */}
       <section className="section-container">
-        <div className="text-center mb-16">
+        <AnimatedSection animation="fade-up" className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">لماذا تختار كرار للتجارة؟</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             نقدم حلول تجارية شاملة مع التركيز على الجودة والموثوقية والشراكات طويلة الأمد.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -224,17 +231,19 @@ const Index = () => {
               description: "حلول تجارية مصممة خصيصاً لمتطلبات وأهداف عملك."
             }
           ].map((feature, index) => (
-            <div 
+            <AnimatedSection 
               key={index} 
-              className="card-elegant text-center"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              animation="fade-up"
+              delay={index * 100}
             >
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-primary" />
+              <div className="card-elegant text-center h-full">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
@@ -248,7 +257,7 @@ const Index = () => {
         <div className="absolute bottom-10 right-10 opacity-5">
           <img src={logo} alt="" className="w-40 h-40 object-contain" />
         </div>
-        <div className="section-container text-center relative z-10">
+        <AnimatedSection animation="scale" className="section-container text-center relative z-10">
           <div className="mb-6">
             <img 
               src={logo} 
@@ -269,7 +278,7 @@ const Index = () => {
               <ArrowRight className="mr-2 h-5 w-5 rotate-180" />
             </Button>
           </Link>
-        </div>
+        </AnimatedSection>
       </section>
 
       <Footer />
