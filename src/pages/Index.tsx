@@ -1,4 +1,4 @@
-import { ArrowRight, Globe, TrendingUp, Users, Shield, CheckCircle } from "lucide-react";
+import { ArrowRight, Globe, TrendingUp, Users, Shield, CheckCircle, Leaf, Handshake, Award, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -37,11 +37,11 @@ const Index = () => {
               className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm"
             />
           </div>
-          <h1 className="heading-display text-5xl sm:text-6xl lg:text-7xl mb-6 animate-fade-in">
-            نربط الأسواق،<br />ونصنع القيمة
+          <h1 className="heading-display text-4xl sm:text-5xl lg:text-6xl mb-6 animate-fade-in">
+            أحمد كرار للتجارة
           </h1>
-          <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto text-primary-foreground/90 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            شريكك الموثوق في التجارة الدولية. نربط الأعمال التجارية عبر أفريقيا والشرق الأوسط وآسيا.
+          <p className="text-lg sm:text-xl mb-8 max-w-4xl mx-auto text-primary-foreground/90 animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            مؤسسة تجارية وطنية رائدة تُعنى بإنتاج وتطوير وتسويق صادرات السودان من المنتجات الزراعية والحيوانية وتعظيم القيمة لها ومضاعفة العائد منها بما يسهم في دعم الاقتصاد الوطني
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <Link to="/contact">
@@ -56,6 +56,62 @@ const Index = () => {
               </Button>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="section-container bg-muted/30">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">قيمنا التي نعتز بها</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            تضم الهيئة الاستشارية لأحمد كرار للتجارة نخبة من الخبراء والمتخصصين، الذين يقدمون رؤى استراتيجية وحلول مبتكرة لدعم تطور المجموعة وتعزيز تنافسيتها في الأسواق المحلية والدولية
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {[
+            {
+              icon: Eye,
+              title: "الالتزام والشفافية",
+              description: "إتباع تشريعات ولوائح وسياسات الدولة والالتزام بكافة العقود والمواثيق مع المتعاملين وتهيئة بيئة ومتطلبات العمل والعدالة المجتمعية في توزيع فرص العمل"
+            },
+            {
+              icon: Award,
+              title: "الإتقان والتميز",
+              description: "تقديم المنتجات والخدمات بصورة احترافية وإتقان وتميز وكفاءة وفاعلية في أداء العمليات والأنشطة التي تلبي رغبات المتعاملين"
+            },
+            {
+              icon: Handshake,
+              title: "التعاون والتكامل",
+              description: "تنفيذ موجهات وسياسات المنظومة والتواصل مع المتعاملين وتشجيع العاملين بالاشتراك في أنشطة المجموعة والعمل بروح الفريق"
+            },
+            {
+              icon: Leaf,
+              title: "الصداقة مع البيئة",
+              description: "تعزيز الممارسات المميزة في التعامل مع البيئة والصحة والسلامة للعاملين والمساهمة في التنمية المستدامة"
+            }
+          ].map((value, index) => (
+            <div 
+              key={index} 
+              className="card-elegant text-center group"
+            >
+              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <value.icon className="h-8 w-8 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Business Sectors Section */}
+      <section className="section-container">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">قطاعات الأعمال</h2>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            تضم أحمد كرار للتجارة وحدات أعمال متكاملة تعمل معًا لتحقيق خطتها الاستراتيجية وتعزيز الصادرات. تشمل هذه الوحدات خدمات الاستشارات التجارية، والتسويق الدولي، وتطوير سلاسل الإمداد، والدعم اللوجستي، وبحوث الأسواق. تهدف المجموعة إلى تمكين الشركات من الوصول إلى الأسواق العالمية عبر حلول مبتكرة تعمل المجموعة وفق أحدث المعايير الدولية لضمان تحقيق نمو مستدام في قطاع الصادرات
+          </p>
         </div>
       </section>
 
