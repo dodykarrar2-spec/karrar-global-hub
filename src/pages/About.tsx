@@ -1,6 +1,7 @@
 import { Target, Eye, Heart, Award } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import aboutImage from "@/assets/about-global.jpg";
 import chairmanPhoto from "@/assets/chairman-photo.jpg";
 import heroImage from "@/assets/hero-camels.png";
@@ -33,7 +34,7 @@ const About = () => {
       {/* Company Overview */}
       <section className="section-container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <AnimatedSection animation="fade-right">
             <h2 className="text-4xl font-bold mb-6">من نحن</h2>
             <p className="text-lg text-muted-foreground mb-4">
               أحمد كرار للتجارة هي شركة تجارة دولية ديناميكية متخصصة في خدمات الاستيراد والتصدير والتجارة العامة. نربط الشركات عبر الحدود، مع التركيز على المنتجات عالية الجودة وسلاسل التوريد الموثوقة والشراكات القوية.
@@ -44,14 +45,14 @@ const About = () => {
             <p className="text-lg text-muted-foreground">
               التزامنا بالجودة ورضا العملاء جعلنا شريكاً موثوقاً للشركات التي تسعى لتوسيع نطاقها العالمي.
             </p>
-          </div>
-          <div className="relative">
+          </AnimatedSection>
+          <AnimatedSection animation="fade-left" delay={200}>
             <img 
               src={aboutImage} 
               alt="شبكة التجارة العالمية" 
               className="rounded-2xl shadow-2xl"
             />
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -59,74 +60,82 @@ const About = () => {
       <section className="bg-muted py-20">
         <div className="section-container">
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-elegant text-center">
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-primary" />
+            <AnimatedSection animation="fade-up" delay={0}>
+              <div className="card-elegant text-center h-full">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">مهمتنا</h3>
+                <p className="text-muted-foreground">
+                  تسهيل التجارة الدولية السلسة من خلال ربط الموردين ذوي الجودة بالمشترين الموثوقين، مما يضمن النمو المتبادل وعلاقات تجارية مستدامة.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">مهمتنا</h3>
-              <p className="text-muted-foreground">
-                تسهيل التجارة الدولية السلسة من خلال ربط الموردين ذوي الجودة بالمشترين الموثوقين، مما يضمن النمو المتبادل وعلاقات تجارية مستدامة.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="card-elegant text-center">
-              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Eye className="h-8 w-8 text-accent" />
+            <AnimatedSection animation="fade-up" delay={150}>
+              <div className="card-elegant text-center h-full">
+                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Eye className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">رؤيتنا</h3>
+                <p className="text-muted-foreground">
+                  أن نصبح الشريك التجاري الرائد في أفريقيا والشرق الأوسط وآسيا، معروفين بنزاهتنا وكفاءتنا والتزامنا بالتميز.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">رؤيتنا</h3>
-              <p className="text-muted-foreground">
-                أن نصبح الشريك التجاري الرائد في أفريقيا والشرق الأوسط وآسيا، معروفين بنزاهتنا وكفاءتنا والتزامنا بالتميز.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="card-elegant text-center">
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="h-8 w-8 text-primary" />
+            <AnimatedSection animation="fade-up" delay={300}>
+              <div className="card-elegant text-center h-full">
+                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">قيمنا</h3>
+                <p className="text-muted-foreground">
+                  النزاهة، الشفافية، التركيز على العملاء، التميز في الجودة، وبناء شراكات طويلة الأمد قائمة على الثقة والاحترام المتبادل.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">قيمنا</h3>
-              <p className="text-muted-foreground">
-                النزاهة، الشفافية، التركيز على العملاء، التميز في الجودة، وبناء شراكات طويلة الأمد قائمة على الثقة والاحترام المتبادل.
-              </p>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Leadership Team */}
       <section className="section-container">
-        <div className="text-center mb-12">
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">قيادتنا</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             تعرف على أصحاب الرؤية الذين يقودون نجاحنا
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="flex flex-wrap justify-center gap-12">
-          <div className="text-center max-w-sm">
-            <div className="mb-6">
-              <img 
-                src={chairmanPhoto} 
-                alt="أحمد حسن - رئيس مجلس الإدارة" 
-                className="w-48 h-48 rounded-full mx-auto object-cover shadow-xl border-4 border-primary/20"
-              />
+        <AnimatedSection animation="scale" delay={200}>
+          <div className="flex flex-wrap justify-center gap-12">
+            <div className="text-center max-w-sm">
+              <div className="mb-6">
+                <img 
+                  src={chairmanPhoto} 
+                  alt="أحمد حسن - رئيس مجلس الإدارة" 
+                  className="w-48 h-48 rounded-full mx-auto object-cover shadow-xl border-4 border-primary/20"
+                />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">أحمد حسن</h3>
+              <p className="text-primary font-semibold mb-3">رئيس مجلس الإدارة</p>
+              <p className="text-muted-foreground">
+                يقود أحمد كرار للتجارة برؤية للتميز والتزام ببناء علاقات تجارية دائمة عبر القارات.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold mb-2">أحمد حسن</h3>
-            <p className="text-primary font-semibold mb-3">رئيس مجلس الإدارة</p>
-            <p className="text-muted-foreground">
-              يقود أحمد كرار للتجارة برؤية للتميز والتزام ببناء علاقات تجارية دائمة عبر القارات.
-            </p>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Why Choose Us */}
       <section className="section-container">
-        <div className="text-center mb-12">
+        <AnimatedSection animation="fade-up" className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">لماذا تشاركنا؟</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             نجلب الخبرة والموثوقية والالتزام بنجاحك
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-6">
           {[
@@ -155,15 +164,17 @@ const About = () => {
               description: "اتصالات راسخة مع موردين موثوقين وشركاء لوجستيين حول العالم."
             }
           ].map((item, index) => (
-            <div key={index} className="flex gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300">
-              <div className="flex-shrink-0">
-                <Award className="h-6 w-6 text-primary mt-1" />
+            <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
+              <div className="flex gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300 h-full">
+                <div className="flex-shrink-0">
+                  <Award className="h-6 w-6 text-primary mt-1" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>

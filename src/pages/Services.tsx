@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import heroImage from "@/assets/hero-legumes.png";
 
 const Services = () => {
@@ -34,119 +35,129 @@ const Services = () => {
       <section className="section-container">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Import Services */}
-          <div className="card-elegant">
-            <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Ship className="h-8 w-8 text-primary" />
+          <AnimatedSection animation="fade-right" delay={0}>
+            <div className="card-elegant h-full">
+              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Ship className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">خدمات الاستيراد</h2>
+              <p className="text-muted-foreground mb-6">
+                نوفر منتجات عالية الجودة من موردين دوليين موثوقين، مع ضمان الامتثال لجميع المتطلبات التنظيمية ومعايير الجودة.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "توريد المنتجات من موردين معتمدين",
+                  "فحص الجودة والشهادات",
+                  "التخليص الجمركي والتوثيق",
+                  "أسعار شحن تنافسية",
+                  "خيارات التسليم من الباب إلى الباب"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="bg-primary rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h2 className="text-3xl font-bold mb-4">خدمات الاستيراد</h2>
-            <p className="text-muted-foreground mb-6">
-              نوفر منتجات عالية الجودة من موردين دوليين موثوقين، مع ضمان الامتثال لجميع المتطلبات التنظيمية ومعايير الجودة.
-            </p>
-            <ul className="space-y-3">
-              {[
-                "توريد المنتجات من موردين معتمدين",
-                "فحص الجودة والشهادات",
-                "التخليص الجمركي والتوثيق",
-                "أسعار شحن تنافسية",
-                "خيارات التسليم من الباب إلى الباب"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="bg-primary rounded-full p-1 mt-0.5">
-                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
-                  </div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </AnimatedSection>
 
           {/* Export Services */}
-          <div className="card-elegant">
-            <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Package className="h-8 w-8 text-accent" />
+          <AnimatedSection animation="fade-left" delay={150}>
+            <div className="card-elegant h-full">
+              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Package className="h-8 w-8 text-accent" />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">خدمات التصدير</h2>
+              <p className="text-muted-foreground mb-6">
+                اربط منتجاتك بالأسواق الدولية. نتولى جميع جوانب عملية التصدير، من التوثيق إلى التسليم النهائي.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "بحث السوق وتحديد المشترين",
+                  "توثيق التصدير والتراخيص",
+                  "تنسيق الشحن الدولي",
+                  "معالجة المدفوعات والتمويل التجاري",
+                  "دعم ما بعد البيع والتتبع"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="bg-accent rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-accent-foreground rounded-full" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h2 className="text-3xl font-bold mb-4">خدمات التصدير</h2>
-            <p className="text-muted-foreground mb-6">
-              اربط منتجاتك بالأسواق الدولية. نتولى جميع جوانب عملية التصدير، من التوثيق إلى التسليم النهائي.
-            </p>
-            <ul className="space-y-3">
-              {[
-                "بحث السوق وتحديد المشترين",
-                "توثيق التصدير والتراخيص",
-                "تنسيق الشحن الدولي",
-                "معالجة المدفوعات والتمويل التجاري",
-                "دعم ما بعد البيع والتتبع"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="bg-accent rounded-full p-1 mt-0.5">
-                    <div className="w-2 h-2 bg-accent-foreground rounded-full" />
-                  </div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </AnimatedSection>
 
           {/* Logistics Management */}
-          <div className="card-elegant">
-            <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Truck className="h-8 w-8 text-primary" />
+          <AnimatedSection animation="fade-right" delay={300}>
+            <div className="card-elegant h-full">
+              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Truck className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">إدارة اللوجستيات</h2>
+              <p className="text-muted-foreground mb-6">
+                حلول سلسلة توريد شاملة تضمن وصول منتجاتك إلى وجهتها بأمان وفي الوقت المحدد وبتكلفة فعالة.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "خيارات الشحن البحري والجوي والبري",
+                  "حلول التخزين والمستودعات",
+                  "إدارة المخزون",
+                  "تتبع الشحنات في الوقت الفعلي",
+                  "تنسيق التسليم للميل الأخير"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="bg-primary rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h2 className="text-3xl font-bold mb-4">إدارة اللوجستيات</h2>
-            <p className="text-muted-foreground mb-6">
-              حلول سلسلة توريد شاملة تضمن وصول منتجاتك إلى وجهتها بأمان وفي الوقت المحدد وبتكلفة فعالة.
-            </p>
-            <ul className="space-y-3">
-              {[
-                "خيارات الشحن البحري والجوي والبري",
-                "حلول التخزين والمستودعات",
-                "إدارة المخزون",
-                "تتبع الشحنات في الوقت الفعلي",
-                "تنسيق التسليم للميل الأخير"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="bg-primary rounded-full p-1 mt-0.5">
-                    <div className="w-2 h-2 bg-primary-foreground rounded-full" />
-                  </div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </AnimatedSection>
 
           {/* Product Sourcing */}
-          <div className="card-elegant">
-            <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <Search className="h-8 w-8 text-accent" />
+          <AnimatedSection animation="fade-left" delay={450}>
+            <div className="card-elegant h-full">
+              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Search className="h-8 w-8 text-accent" />
+              </div>
+              <h2 className="text-3xl font-bold mb-4">توريد المنتجات</h2>
+              <p className="text-muted-foreground mb-6">
+                استفد من شبكتنا الواسعة للعثور على المنتجات المناسبة بالسعر المناسب، مع ضمان الجودة.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "التحقق من الموردين وتقييمهم",
+                  "التفاوض على الأسعار والمقارنة",
+                  "الحصول على العينات واختبارها",
+                  "خدمات التخصيص والتصنيع",
+                  "إدارة علاقات الموردين المستمرة"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="bg-accent rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-accent-foreground rounded-full" />
+                    </div>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h2 className="text-3xl font-bold mb-4">توريد المنتجات</h2>
-            <p className="text-muted-foreground mb-6">
-              استفد من شبكتنا الواسعة للعثور على المنتجات المناسبة بالسعر المناسب، مع ضمان الجودة.
-            </p>
-            <ul className="space-y-3">
-              {[
-                "التحقق من الموردين وتقييمهم",
-                "التفاوض على الأسعار والمقارنة",
-                "الحصول على العينات واختبارها",
-                "خدمات التخصيص والتصنيع",
-                "إدارة علاقات الموردين المستمرة"
-              ].map((item, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <div className="bg-accent rounded-full p-1 mt-0.5">
-                    <div className="w-2 h-2 bg-accent-foreground rounded-full" />
-                  </div>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Additional Services */}
       <section className="bg-muted py-20">
         <div className="section-container">
-          <h2 className="text-4xl font-bold text-center mb-12">خدمات إضافية</h2>
+          <AnimatedSection animation="fade-up">
+            <h2 className="text-4xl font-bold text-center mb-12">خدمات إضافية</h2>
+          </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -165,30 +176,34 @@ const Services = () => {
                 description: "حلول تجارية مصممة خصيصاً لاحتياجاتك المحددة"
               }
             ].map((service, index) => (
-              <div key={index} className="bg-card p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="h-8 w-8 text-primary" />
+              <AnimatedSection key={index} animation="scale" delay={index * 150}>
+                <div className="bg-card p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-container text-center">
-        <h2 className="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          تواصل معنا اليوم لمناقشة كيف يمكننا دعم احتياجاتك التجارية الدولية.
-        </p>
-        <Link to="/contact">
-          <Button size="lg" className="btn-primary">
-            اطلب عرض سعر
-          </Button>
-        </Link>
-      </section>
+      <AnimatedSection animation="fade-up">
+        <section className="section-container text-center">
+          <h2 className="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            تواصل معنا اليوم لمناقشة كيف يمكننا دعم احتياجاتك التجارية الدولية.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" className="btn-primary">
+              اطلب عرض سعر
+            </Button>
+          </Link>
+        </section>
+      </AnimatedSection>
 
       <Footer />
     </div>

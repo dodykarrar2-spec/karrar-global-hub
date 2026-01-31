@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { z } from "zod";
 import heroImage from "@/assets/hero-gum-arabic.png";
 
@@ -106,7 +107,7 @@ const Contact = () => {
       <section className="section-container">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div>
+          <AnimatedSection animation="fade-right">
             <h2 className="text-3xl font-bold mb-6">تواصل معنا</h2>
             <p className="text-lg text-muted-foreground mb-8">
               هل لديك سؤال أو مستعد لمناقشة شراكة؟ نحن هنا للمساعدة. تواصل معنا من خلال أي من القنوات التالية.
@@ -178,103 +179,105 @@ const Contact = () => {
                 title="موقع أحمد كرار للتجارة"
               />
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Contact Form */}
-          <div className="card-elegant">
-            <h2 className="text-3xl font-bold mb-6">أرسل لنا رسالة</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  الاسم الكامل *
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  maxLength={100}
-                  placeholder="أحمد محمد"
-                />
-              </div>
+          <AnimatedSection animation="fade-left" delay={200}>
+            <div className="card-elegant">
+              <h2 className="text-3xl font-bold mb-6">أرسل لنا رسالة</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    الاسم الكامل *
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    maxLength={100}
+                    placeholder="أحمد محمد"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  البريد الإلكتروني *
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  maxLength={255}
-                  placeholder="ahmed@example.com"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    البريد الإلكتروني *
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    maxLength={255}
+                    placeholder="ahmed@example.com"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  رقم الهاتف *
-                </label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  maxLength={20}
-                  placeholder="+250 795 200 389"
-                />
-              </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    رقم الهاتف *
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    maxLength={20}
+                    placeholder="+250 795 200 389"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  اسم الشركة (اختياري)
-                </label>
-                <Input
-                  id="company"
-                  name="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={handleChange}
-                  maxLength={100}
-                  placeholder="شركتك"
-                />
-              </div>
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium mb-2">
+                    اسم الشركة (اختياري)
+                  </label>
+                  <Input
+                    id="company"
+                    name="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={handleChange}
+                    maxLength={100}
+                    placeholder="شركتك"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  الرسالة *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  maxLength={1000}
-                  rows={5}
-                  placeholder="أخبرنا عن احتياجاتك التجارية..."
-                />
-                <p className="text-xs text-muted-foreground mt-1">
-                  {formData.message.length}/1000 حرف
-                </p>
-              </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    الرسالة *
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    maxLength={1000}
+                    rows={5}
+                    placeholder="أخبرنا عن احتياجاتك التجارية..."
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">
+                    {formData.message.length}/1000 حرف
+                  </p>
+                </div>
 
-              <Button
-                type="submit"
-                className="w-full btn-primary"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
-              </Button>
-            </form>
-          </div>
+                <Button
+                  type="submit"
+                  className="w-full btn-primary"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
+                </Button>
+              </form>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
