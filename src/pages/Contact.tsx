@@ -107,8 +107,8 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-primary" />
+                <div className="bg-rose-500/10 p-3 rounded-lg">
+                  <MapPin className="h-6 w-6 text-rose-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">مكتبنا</h3>
@@ -120,8 +120,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-primary" />
+                <div className="bg-emerald-500/10 p-3 rounded-lg">
+                  <Phone className="h-6 w-6 text-emerald-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">الهاتف</h3>
@@ -132,8 +132,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-primary" />
+                <div className="bg-sky-500/10 p-3 rounded-lg">
+                  <Mail className="h-6 w-6 text-sky-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">البريد الإلكتروني</h3>
@@ -144,8 +144,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-primary/10 p-3 rounded-lg">
-                  <Clock className="h-6 w-6 text-primary" />
+                <div className="bg-amber-500/10 p-3 rounded-lg">
+                  <Clock className="h-6 w-6 text-amber-500" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">ساعات العمل</h3>

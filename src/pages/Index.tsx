@@ -71,22 +71,34 @@ const Index = () => {
             {
               icon: Eye,
               title: "الالتزام والشفافية",
-              description: "إتباع تشريعات ولوائح وسياسات الدولة والالتزام بكافة العقود والمواثيق مع المتعاملين وتهيئة بيئة ومتطلبات العمل والعدالة المجتمعية في توزيع فرص العمل"
+              description: "إتباع تشريعات ولوائح وسياسات الدولة والالتزام بكافة العقود والمواثيق مع المتعاملين وتهيئة بيئة ومتطلبات العمل والعدالة المجتمعية في توزيع فرص العمل",
+              iconColor: "text-blue-500",
+              bgColor: "bg-blue-500/10",
+              hoverBg: "group-hover:bg-blue-500/20"
             },
             {
               icon: Award,
               title: "الإتقان والتميز",
-              description: "تقديم المنتجات والخدمات بصورة احترافية وإتقان وتميز وكفاءة وفاعلية في أداء العمليات والأنشطة التي تلبي رغبات المتعاملين"
+              description: "تقديم المنتجات والخدمات بصورة احترافية وإتقان وتميز وكفاءة وفاعلية في أداء العمليات والأنشطة التي تلبي رغبات المتعاملين",
+              iconColor: "text-amber-500",
+              bgColor: "bg-amber-500/10",
+              hoverBg: "group-hover:bg-amber-500/20"
             },
             {
               icon: Handshake,
               title: "التعاون والتكامل",
-              description: "تنفيذ موجهات وسياسات المنظومة والتواصل مع المتعاملين وتشجيع العاملين بالاشتراك في أنشطة المجموعة والعمل بروح الفريق"
+              description: "تنفيذ موجهات وسياسات المنظومة والتواصل مع المتعاملين وتشجيع العاملين بالاشتراك في أنشطة المجموعة والعمل بروح الفريق",
+              iconColor: "text-emerald-500",
+              bgColor: "bg-emerald-500/10",
+              hoverBg: "group-hover:bg-emerald-500/20"
             },
             {
               icon: Leaf,
               title: "الصداقة مع البيئة",
-              description: "تعزيز الممارسات المميزة في التعامل مع البيئة والصحة والسلامة للعاملين والمساهمة في التنمية المستدامة"
+              description: "تعزيز الممارسات المميزة في التعامل مع البيئة والصحة والسلامة للعاملين والمساهمة في التنمية المستدامة",
+              iconColor: "text-green-500",
+              bgColor: "bg-green-500/10",
+              hoverBg: "group-hover:bg-green-500/20"
             }
           ].map((value, index) => (
             <AnimatedSection 
@@ -95,8 +107,8 @@ const Index = () => {
               delay={index * 100}
             >
               <div className="card-elegant text-center group h-full">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
-                  <value.icon className="h-8 w-8 text-primary" />
+                <div className={`${value.bgColor} ${value.hoverBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors`}>
+                  <value.icon className={`h-8 w-8 ${value.iconColor}`} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
@@ -214,32 +226,50 @@ const Index = () => {
             {
               icon: Globe,
               title: "انتشار عالمي",
-              description: "شبكة واسعة في أفريقيا والشرق الأوسط وآسيا، تربطك بالأسواق حول العالم."
+              description: "شبكة واسعة في أفريقيا والشرق الأوسط وآسيا، تربطك بالأسواق حول العالم.",
+              iconColor: "text-sky-500",
+              bgColor: "bg-sky-500/10",
+              hoverBg: "group-hover:bg-sky-500/20"
             },
             {
               icon: Shield,
               title: "ضمان الجودة",
-              description: "عمليات رقابة جودة صارمة تضمن حصولك على أفضل المنتجات والخدمات."
+              description: "عمليات رقابة جودة صارمة تضمن حصولك على أفضل المنتجات والخدمات.",
+              iconColor: "text-indigo-500",
+              bgColor: "bg-indigo-500/10",
+              hoverBg: "group-hover:bg-indigo-500/20"
             },
             {
               icon: TrendingUp,
               title: "أسعار تنافسية",
-              description: "علاقات قوية مع الموردين ولوجستيات فعالة توفر قيمة استثنائية."
+              description: "علاقات قوية مع الموردين ولوجستيات فعالة توفر قيمة استثنائية.",
+              iconColor: "text-emerald-500",
+              bgColor: "bg-emerald-500/10",
+              hoverBg: "group-hover:bg-emerald-500/20"
             },
             {
               icon: Users,
               title: "فريق خبراء",
-              description: "محترفون ذوو خبرة ملتزمون بفهم وتلبية احتياجات عملك الفريدة."
+              description: "محترفون ذوو خبرة ملتزمون بفهم وتلبية احتياجات عملك الفريدة.",
+              iconColor: "text-violet-500",
+              bgColor: "bg-violet-500/10",
+              hoverBg: "group-hover:bg-violet-500/20"
             },
             {
               icon: CheckCircle,
               title: "خدمة موثوقة",
-              description: "تسليم منتظم في الوقت المحدد وتواصل شفاف طوال كل معاملة."
+              description: "تسليم منتظم في الوقت المحدد وتواصل شفاف طوال كل معاملة.",
+              iconColor: "text-teal-500",
+              bgColor: "bg-teal-500/10",
+              hoverBg: "group-hover:bg-teal-500/20"
             },
             {
               icon: Globe,
               title: "حلول مخصصة",
-              description: "حلول تجارية مصممة خصيصاً لمتطلبات وأهداف عملك."
+              description: "حلول تجارية مصممة خصيصاً لمتطلبات وأهداف عملك.",
+              iconColor: "text-rose-500",
+              bgColor: "bg-rose-500/10",
+              hoverBg: "group-hover:bg-rose-500/20"
             }
           ].map((feature, index) => (
             <AnimatedSection 
@@ -247,9 +277,9 @@ const Index = () => {
               animation="fade-up"
               delay={index * 100}
             >
-              <div className="card-elegant text-center h-full">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-primary" />
+              <div className="card-elegant text-center h-full group">
+                <div className={`${feature.bgColor} ${feature.hoverBg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors`}>
+                  <feature.icon className={`h-8 w-8 ${feature.iconColor}`} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>

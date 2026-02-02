@@ -29,8 +29,8 @@ const Services = () => {
           {/* Import Services */}
           <AnimatedSection animation="fade-right" delay={0}>
             <div className="card-elegant h-full">
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Ship className="h-8 w-8 text-primary" />
+              <div className="bg-sky-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Ship className="h-8 w-8 text-sky-500" />
               </div>
               <h2 className="text-3xl font-bold mb-4">خدمات الاستيراد</h2>
               <p className="text-muted-foreground mb-6">
@@ -45,8 +45,8 @@ const Services = () => {
                   "خيارات التسليم من الباب إلى الباب"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="bg-primary rounded-full p-1 mt-0.5">
-                      <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                    <div className="bg-sky-500 rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full" />
                     </div>
                     <span>{item}</span>
                   </li>
@@ -58,8 +58,8 @@ const Services = () => {
           {/* Export Services */}
           <AnimatedSection animation="fade-left" delay={150}>
             <div className="card-elegant h-full">
-              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Package className="h-8 w-8 text-accent" />
+              <div className="bg-amber-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Package className="h-8 w-8 text-amber-500" />
               </div>
               <h2 className="text-3xl font-bold mb-4">خدمات التصدير</h2>
               <p className="text-muted-foreground mb-6">
@@ -74,8 +74,8 @@ const Services = () => {
                   "دعم ما بعد البيع والتتبع"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="bg-accent rounded-full p-1 mt-0.5">
-                      <div className="w-2 h-2 bg-accent-foreground rounded-full" />
+                    <div className="bg-amber-500 rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full" />
                     </div>
                     <span>{item}</span>
                   </li>
@@ -87,8 +87,8 @@ const Services = () => {
           {/* Logistics Management */}
           <AnimatedSection animation="fade-right" delay={300}>
             <div className="card-elegant h-full">
-              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Truck className="h-8 w-8 text-primary" />
+              <div className="bg-emerald-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Truck className="h-8 w-8 text-emerald-500" />
               </div>
               <h2 className="text-3xl font-bold mb-4">إدارة اللوجستيات</h2>
               <p className="text-muted-foreground mb-6">
@@ -103,8 +103,8 @@ const Services = () => {
                   "تنسيق التسليم للميل الأخير"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="bg-primary rounded-full p-1 mt-0.5">
-                      <div className="w-2 h-2 bg-primary-foreground rounded-full" />
+                    <div className="bg-emerald-500 rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full" />
                     </div>
                     <span>{item}</span>
                   </li>
@@ -116,8 +116,8 @@ const Services = () => {
           {/* Product Sourcing */}
           <AnimatedSection animation="fade-left" delay={450}>
             <div className="card-elegant h-full">
-              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                <Search className="h-8 w-8 text-accent" />
+              <div className="bg-violet-500/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <Search className="h-8 w-8 text-violet-500" />
               </div>
               <h2 className="text-3xl font-bold mb-4">توريد المنتجات</h2>
               <p className="text-muted-foreground mb-6">
@@ -132,8 +132,8 @@ const Services = () => {
                   "إدارة علاقات الموردين المستمرة"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="bg-accent rounded-full p-1 mt-0.5">
-                      <div className="w-2 h-2 bg-accent-foreground rounded-full" />
+                    <div className="bg-violet-500 rounded-full p-1 mt-0.5">
+                      <div className="w-2 h-2 bg-white rounded-full" />
                     </div>
                     <span>{item}</span>
                   </li>
@@ -155,23 +155,29 @@ const Services = () => {
               {
                 icon: Shield,
                 title: "ضمان الجودة",
-                description: "خدمات شاملة لمراقبة الجودة وفحص المنتجات"
+                description: "خدمات شاملة لمراقبة الجودة وفحص المنتجات",
+                iconColor: "text-indigo-500",
+                bgColor: "bg-indigo-500/10"
               },
               {
                 icon: TrendingUp,
                 title: "تحليل السوق",
-                description: "أبحاث سوق متعمقة وتحديد الفرص التجارية"
+                description: "أبحاث سوق متعمقة وتحديد الفرص التجارية",
+                iconColor: "text-teal-500",
+                bgColor: "bg-teal-500/10"
               },
               {
                 icon: Package,
                 title: "حلول مخصصة",
-                description: "حلول تجارية مصممة خصيصاً لاحتياجاتك المحددة"
+                description: "حلول تجارية مصممة خصيصاً لاحتياجاتك المحددة",
+                iconColor: "text-rose-500",
+                bgColor: "bg-rose-500/10"
               }
             ].map((service, index) => (
               <AnimatedSection key={index} animation="scale" delay={index * 150}>
-                <div className="bg-card p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300 h-full">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <service.icon className="h-8 w-8 text-primary" />
+                <div className="bg-card p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300 h-full group">
+                  <div className={`${service.bgColor} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors`}>
+                    <service.icon className={`h-8 w-8 ${service.iconColor}`} />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-muted-foreground">{service.description}</p>

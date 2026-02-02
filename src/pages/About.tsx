@@ -54,8 +54,8 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection animation="fade-up" delay={0}>
               <div className="card-elegant text-center h-full">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-primary" />
+                <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/20 transition-colors">
+                  <Target className="h-8 w-8 text-red-500" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">مهمتنا</h3>
                 <p className="text-muted-foreground">
@@ -66,8 +66,8 @@ const About = () => {
 
             <AnimatedSection animation="fade-up" delay={150}>
               <div className="card-elegant text-center h-full">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Eye className="h-8 w-8 text-accent" />
+                <div className="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                  <Eye className="h-8 w-8 text-blue-500" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">رؤيتنا</h3>
                 <p className="text-muted-foreground">
@@ -78,8 +78,8 @@ const About = () => {
 
             <AnimatedSection animation="fade-up" delay={300}>
               <div className="card-elegant text-center h-full">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-8 w-8 text-primary" />
+                <div className="bg-pink-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-500/20 transition-colors">
+                  <Heart className="h-8 w-8 text-pink-500" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">قيمنا</h3>
                 <p className="text-muted-foreground">
@@ -133,33 +133,39 @@ const About = () => {
           {[
             {
               title: "معرفة واسعة بالسوق",
-              description: "فهم عميق للأسواق الأفريقية والشرق أوسطية والآسيوية مع خبرة محلية."
+              description: "فهم عميق للأسواق الأفريقية والشرق أوسطية والآسيوية مع خبرة محلية.",
+              iconColor: "text-amber-500"
             },
             {
               title: "ضمان الجودة",
-              description: "عمليات رقابة جودة صارمة لضمان أن معايير المنتجات تلبي المتطلبات الدولية."
+              description: "عمليات رقابة جودة صارمة لضمان أن معايير المنتجات تلبي المتطلبات الدولية.",
+              iconColor: "text-emerald-500"
             },
             {
               title: "أسعار تنافسية",
-              description: "علاقات قوية مع الموردين تمكننا من تقديم أسعار تنافسية دون المساومة على الجودة."
+              description: "علاقات قوية مع الموردين تمكننا من تقديم أسعار تنافسية دون المساومة على الجودة.",
+              iconColor: "text-sky-500"
             },
             {
               title: "لوجستيات موثوقة",
-              description: "إدارة سلسلة توريد فعالة تضمن التسليم في الوقت المحدد والتتبع الشفاف."
+              description: "إدارة سلسلة توريد فعالة تضمن التسليم في الوقت المحدد والتتبع الشفاف.",
+              iconColor: "text-violet-500"
             },
             {
               title: "خدمة شخصية",
-              description: "مديرو حسابات مخصصون يفهمون احتياجات عملك ويقدمون حلولاً مخصصة."
+              description: "مديرو حسابات مخصصون يفهمون احتياجات عملك ويقدمون حلولاً مخصصة.",
+              iconColor: "text-rose-500"
             },
             {
               title: "شبكة عالمية",
-              description: "اتصالات راسخة مع موردين موثوقين وشركاء لوجستيين حول العالم."
+              description: "اتصالات راسخة مع موردين موثوقين وشركاء لوجستيين حول العالم.",
+              iconColor: "text-teal-500"
             }
           ].map((item, index) => (
             <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
               <div className="flex gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300 h-full">
                 <div className="flex-shrink-0">
-                  <Award className="h-6 w-6 text-primary mt-1" />
+                  <Award className={`h-6 w-6 ${item.iconColor} mt-1`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
