@@ -2,6 +2,7 @@ import { Target, Eye, Heart, Award } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
+import { ParallaxHero } from "@/hooks/use-parallax";
 import aboutImage from "@/assets/about-global.jpg";
 import chairmanPhoto from "@/assets/chairman-photo.jpg";
 import heroImage from "@/assets/hero-camels.png";
@@ -13,16 +14,7 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0 animate-hero-zoom"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/80 to-primary/70" />
-        </div>
+        <ParallaxHero image={heroImage} speed={0.3} />
         <div className="section-container relative z-10">
           <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">من نحن</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, TrendingDown, Ship, Package } from "lucide-react";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
+import { ParallaxHero } from "@/hooks/use-parallax";
 import sheepImage from "@/assets/sheep-export.jpg";
 import camelsImage from "@/assets/camels-export.jpg";
 import cattleImage from "@/assets/cattle-export.jpg";
@@ -160,16 +161,7 @@ const Products = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0 animate-hero-zoom"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/80 to-primary/70" />
-        </div>
+        <ParallaxHero image={heroImage} speed={0.3} />
         <div className="absolute top-10 right-10 opacity-10 z-10">
           <img src={logo} alt="" className="w-40 h-40 object-contain" />
         </div>
