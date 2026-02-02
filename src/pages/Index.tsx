@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
+import { ParallaxHero } from "@/hooks/use-parallax";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -20,16 +21,11 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0 animate-hero-zoom"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center top',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/75 to-primary/60" />
-        </div>
+        <ParallaxHero 
+          image={heroImage} 
+          speed={0.4}
+          overlay="bg-gradient-to-l from-primary/90 via-primary/75 to-primary/60"
+        />
         
         <div className="relative z-10 section-container text-center text-primary-foreground">
           <div className="mb-8 animate-fade-in">
