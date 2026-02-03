@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { ParallaxHero } from "@/hooks/use-parallax";
+import StatisticsSection from "@/components/StatisticsSection";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -211,6 +212,9 @@ const Index = () => {
           </Link>
         </AnimatedSection>
       </section>
+
+      {/* Statistics Section */}
+      <StatisticsSection />
 
       {/* Features Section */}
       <section className="section-container">
