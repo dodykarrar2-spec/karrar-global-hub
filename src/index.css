@@ -159,4 +159,36 @@ All colors MUST be HSL.
     @apply bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold;
     @apply hover:bg-secondary/80 transition-all duration-300;
   }
+
+  /* Partners Marquee Animations */
+  @keyframes marquee-rtl {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-ltr {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee-rtl {
+    animation: marquee-rtl 30s linear infinite;
+  }
+
+  .animate-marquee-ltr {
+    animation: marquee-ltr 30s linear infinite;
+  }
+
+  .animate-marquee-rtl:hover,
+  .animate-marquee-ltr:hover {
+    animation-play-state: paused;
+  }
 }
