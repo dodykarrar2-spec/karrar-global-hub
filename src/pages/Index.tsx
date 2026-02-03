@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { ParallaxHero } from "@/hooks/use-parallax";
 import StatisticsSection from "@/components/StatisticsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -292,6 +293,9 @@ const Index = () => {
           ))}
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* CTA Section */}
       <section className="bg-muted py-20 relative overflow-hidden">
