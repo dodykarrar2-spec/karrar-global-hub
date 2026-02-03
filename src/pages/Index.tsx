@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { ParallaxHero } from "@/hooks/use-parallax";
 import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import PartnersMarquee from "@/components/PartnersMarquee";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -216,6 +217,9 @@ const Index = () => {
 
       {/* Statistics Section */}
       <StatisticsSection />
+
+      {/* Partners Marquee */}
+      <PartnersMarquee />
 
       {/* Features Section */}
       <section className="section-container">
