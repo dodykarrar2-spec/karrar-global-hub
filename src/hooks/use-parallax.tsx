@@ -25,7 +25,7 @@ interface ParallaxHeroProps {
 export const ParallaxHero = ({ 
   image, 
   speed = 0.4, 
-  overlay = "bg-gradient-to-l from-primary/90 via-primary/80 to-primary/70",
+  overlay = "bg-gradient-to-l from-primary/95 via-primary/85 to-primary/80",
   className = ""
 }: ParallaxHeroProps) => {
   const offset = useParallax(speed);
@@ -35,7 +35,7 @@ export const ParallaxHero = ({
       className={`absolute inset-0 z-0 overflow-hidden ${className}`}
     >
       <div 
-        className="absolute inset-0 w-full h-[120%] animate-hero-zoom"
+        className="absolute inset-0 w-full h-[120%]"
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',

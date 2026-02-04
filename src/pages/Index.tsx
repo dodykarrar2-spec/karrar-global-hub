@@ -28,7 +28,7 @@ const Index = () => {
         <ParallaxHero 
           image={heroImage} 
           speed={0.4}
-          overlay="bg-gradient-to-l from-primary/90 via-primary/75 to-primary/60"
+          overlay="bg-primary/90"
         />
         
         <div className="relative z-10 section-container text-center text-primary-foreground">
