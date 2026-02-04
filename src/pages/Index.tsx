@@ -8,6 +8,7 @@ import { ParallaxHero } from "@/hooks/use-parallax";
 import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
+import OfficesSection from "@/components/OfficesSection";
 import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -217,6 +218,9 @@ const Index = () => {
 
       {/* Statistics Section */}
       <StatisticsSection />
+
+      {/* Offices Section */}
+      <OfficesSection />
 
       {/* Partners Marquee */}
       <PartnersMarquee />
