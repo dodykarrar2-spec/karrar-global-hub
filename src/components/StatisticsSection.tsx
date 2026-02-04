@@ -84,28 +84,8 @@ const StatisticsSection = () => {
 
   return (
     <section className="relative py-16 overflow-hidden">
-      {/* Animated gradient background */}
+      {/* Gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary" />
-      
-      {/* Decorative patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full" 
-          style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                              radial-gradient(circle at 80% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)`,
-          }}
-        />
-      </div>
-      
-      {/* Floating orbs */}
-      <div className="absolute top-1/2 left-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" />
-      <div className="absolute top-1/2 right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
-      
-      {/* Diagonal lines decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/4 w-1/2 h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent rotate-12" />
-        <div className="absolute -top-1/2 -right-1/4 w-1/2 h-[200%] bg-gradient-to-r from-transparent via-white/5 to-transparent -rotate-12" />
-      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Strip */}
