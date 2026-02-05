@@ -4,12 +4,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
-import { ParallaxHero } from "@/hooks/use-parallax";
 import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import OfficesSection from "@/components/OfficesSection";
-import heroImage from "@/assets/hero-agricultural.png";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
 import camelsImage from "@/assets/camels-export.jpg";
@@ -24,13 +22,7 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <ParallaxHero 
-          image={heroImage} 
-          speed={0.4}
-          overlay="bg-primary/95"
-        />
-        
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
         <div className="relative z-10 section-container text-center text-primary-foreground">
           <div className="mb-8 animate-fade-in">
             <img 
