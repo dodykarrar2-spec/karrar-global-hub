@@ -44,7 +44,7 @@ export const ParallaxHero = ({
           willChange: 'transform',
         }}
       />
-      <div className={`absolute inset-0 ${overlay}`} />
+      <div className={`absolute inset-0 ${overlay}`} style={{ boxShadow: 'none' }} />
     </div>
   );
 };
