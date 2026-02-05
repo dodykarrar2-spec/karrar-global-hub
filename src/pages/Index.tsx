@@ -15,6 +15,7 @@ import cattleImage from "@/assets/cattle-export.jpg";
 import gumArabicImage from "@/assets/gum-arabic-real.jpg";
 import peanutsImage from "@/assets/peanuts-real.jpg";
 import businessSectorsBg from "@/assets/business-sectors-bg.jpg";
+import heroImage from "@/assets/hero-agricultural.png";
 
 const Index = () => {
   return (
@@ -22,7 +23,16 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image - No Parallax */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/90" />
+        </div>
         <div className="relative z-10 section-container text-center text-primary-foreground">
           <div className="mb-8 animate-fade-in">
             <img 
