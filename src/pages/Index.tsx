@@ -23,15 +23,19 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
         {/* Background Image - No Parallax */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroImage} 
-            alt="" 
-            className="w-full h-full object-cover"
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
+            src={heroImage}
+            alt=""
+            className="w-full h-full object-cover scale-[1.12] sm:scale-[1.18] transform-gpu brightness-90 contrast-110 saturate-90"
           />
-          <div className="absolute inset-0 bg-primary/90" />
+          {/* Base overlay (prevents bright/washed edges) */}
+          <div className="absolute inset-0 bg-primary/80" />
+          {/* Side vignettes to remove bright edges */}
+          <div className="absolute inset-y-0 left-0 w-56 sm:w-80 lg:w-96 bg-gradient-to-r from-primary/98 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-56 sm:w-80 lg:w-96 bg-gradient-to-l from-primary/98 to-transparent" />
         </div>
         <div className="relative z-10 section-container text-center text-primary-foreground">
           <div className="mb-8 animate-fade-in">
