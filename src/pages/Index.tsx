@@ -15,6 +15,7 @@ import cattleImage from "@/assets/cattle-export.jpg";
 import gumArabicImage from "@/assets/gum-arabic-real.jpg";
 import peanutsImage from "@/assets/peanuts-real.jpg";
 import businessSectorsBg from "@/assets/business-sectors-bg.jpg";
+import heroImage from "@/assets/hero-agricultural.png";
 
 
 const Index = () => {
@@ -24,8 +25,18 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-        {/* Flat Background Only (no image / no overlays / no gradients) */}
-        <div className="absolute inset-0 z-0 bg-primary" />
+        {/* Hero Background (no overlays / no gradients) */}
+        <div className="absolute inset-0 z-0 bg-primary" aria-hidden="true" />
+        <div
+          className="absolute -inset-12 sm:-inset-16 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          aria-hidden="true"
+        />
         <div className="relative z-10 section-container text-center text-primary-foreground">
           <div className="mb-8 animate-fade-in">
             <img 
