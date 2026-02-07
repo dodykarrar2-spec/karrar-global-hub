@@ -25,10 +25,10 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-        {/* Hero Background */}
+        {/* Hero Background with slow zoom animation */}
         <div className="absolute inset-0 z-0 bg-primary" aria-hidden="true" />
         <div
-          className="absolute -inset-12 sm:-inset-16 z-0 bg-cover bg-center"
+          className="absolute -inset-12 sm:-inset-16 z-0 bg-cover bg-center animate-slow-zoom"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundRepeat: "no-repeat",
@@ -39,29 +39,46 @@ const Index = () => {
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 z-[1] bg-primary/70" aria-hidden="true" />
+        
         <div className="relative z-10 section-container text-center text-white">
-          <div className="mb-8 animate-fade-in">
+          {/* Logo with float animation */}
+          <div className="mb-8 animate-slide-up">
             <img 
               src={logo} 
               alt="أحمد كرار للتجارة" 
-              className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm"
+              className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm animate-float"
             />
           </div>
-          <h1 className="heading-display text-4xl sm:text-5xl lg:text-6xl mb-6 animate-fade-in text-white drop-shadow-lg">
+          
+          {/* Title with slide-up animation */}
+          <h1 
+            className="heading-display text-4xl sm:text-5xl lg:text-6xl mb-6 text-white drop-shadow-lg animate-slide-up opacity-0"
+            style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}
+          >
             أحمد كرار للتجارة
           </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-4xl mx-auto text-white/95 animate-fade-in leading-relaxed drop-shadow-md" style={{ animationDelay: '0.2s' }}>
+          
+          {/* Description with slide-up animation */}
+          <p 
+            className="text-lg sm:text-xl mb-8 max-w-4xl mx-auto text-white/95 leading-relaxed drop-shadow-md animate-slide-up opacity-0"
+            style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
+          >
             مؤسسة تجارية وطنية رائدة تُعنى بإنتاج وتطوير وتسويق صادرات السودان من المنتجات الزراعية والحيوانية وتعظيم القيمة لها ومضاعفة العائد منها بما يسهم في دعم الاقتصاد الوطني
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          
+          {/* Buttons with slide-up animation */}
+          <div 
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up opacity-0"
+            style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}
+          >
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="group">
+              <Button size="lg" variant="secondary" className="group hover:scale-105 transition-transform">
                 ابدأ الآن
                 <ArrowRight className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1 rotate-180" />
               </Button>
             </Link>
             <Link to="/services">
-              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 hover:scale-105 transition-transform">
                 خدماتنا
               </Button>
             </Link>
