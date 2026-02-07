@@ -25,7 +25,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
-        {/* Hero Background (no overlays / no gradients) */}
+        {/* Hero Background */}
         <div className="absolute inset-0 z-0 bg-primary" aria-hidden="true" />
         <div
           className="absolute -inset-12 sm:-inset-16 z-0 bg-cover bg-center"
@@ -37,7 +37,9 @@ const Index = () => {
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10 section-container text-center text-primary-foreground">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 z-[1] bg-primary/70" aria-hidden="true" />
+        <div className="relative z-10 section-container text-center text-white">
           <div className="mb-8 animate-fade-in">
             <img 
               src={logo} 
@@ -45,10 +47,10 @@ const Index = () => {
               className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm"
             />
           </div>
-          <h1 className="heading-display text-4xl sm:text-5xl lg:text-6xl mb-6 animate-fade-in">
+          <h1 className="heading-display text-4xl sm:text-5xl lg:text-6xl mb-6 animate-fade-in text-white drop-shadow-lg">
             أحمد كرار للتجارة
           </h1>
-          <p className="text-lg sm:text-xl mb-8 max-w-4xl mx-auto text-primary-foreground/90 animate-fade-in leading-relaxed" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl mb-8 max-w-4xl mx-auto text-white/95 animate-fade-in leading-relaxed drop-shadow-md" style={{ animationDelay: '0.2s' }}>
             مؤسسة تجارية وطنية رائدة تُعنى بإنتاج وتطوير وتسويق صادرات السودان من المنتجات الزراعية والحيوانية وتعظيم القيمة لها ومضاعفة العائد منها بما يسهم في دعم الاقتصاد الوطني
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
