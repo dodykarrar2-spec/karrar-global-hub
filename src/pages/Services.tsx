@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { ParallaxHero } from "@/hooks/use-parallax";
 import heroImage from "@/assets/hero-legumes.png";
+import logo from "@/assets/logo.jpg";
 
 const Services = () => {
   return (
@@ -15,6 +16,9 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
         <ParallaxHero image={heroImage} speed={0.3} />
+        <div className="absolute top-10 left-10 opacity-10 z-10">
+          <img src={logo} alt="" className="w-28 h-28 object-contain" />
+        </div>
         <div className="section-container relative z-10">
           <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">خدماتنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
@@ -147,8 +151,11 @@ const Services = () => {
       {/* Additional Services */}
       <section className="bg-muted py-20">
         <div className="section-container">
-          <AnimatedSection animation="fade-up">
-            <h2 className="text-4xl font-bold text-center mb-12">خدمات إضافية</h2>
+           <AnimatedSection animation="fade-up">
+            <div className="flex flex-col items-center mb-12">
+              <img src={logo} alt="" className="w-14 h-14 rounded-full shadow-lg border-2 border-primary/20 object-contain mb-4 opacity-50" />
+              <h2 className="text-4xl font-bold text-center">خدمات إضافية</h2>
+            </div>
           </AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -190,16 +197,25 @@ const Services = () => {
 
       {/* CTA Section */}
       <AnimatedSection animation="fade-up">
-        <section className="section-container text-center">
-          <h2 className="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            تواصل معنا اليوم لمناقشة كيف يمكننا دعم احتياجاتك التجارية الدولية.
-          </p>
-          <Link to="/contact">
-            <Button size="lg" className="btn-primary">
-              اطلب عرض سعر
-            </Button>
-          </Link>
+        <section className="section-container text-center relative overflow-hidden">
+          <div className="absolute top-5 left-5 opacity-5">
+            <img src={logo} alt="" className="w-24 h-24 object-contain" />
+          </div>
+          <div className="absolute bottom-5 right-5 opacity-5">
+            <img src={logo} alt="" className="w-32 h-32 object-contain" />
+          </div>
+          <div className="relative z-10">
+            <img src={logo} alt="" className="w-14 h-14 mx-auto rounded-full shadow-md border-2 border-primary/20 object-contain mb-4 opacity-60" />
+            <h2 className="text-4xl font-bold mb-6">هل أنت مستعد للبدء؟</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              تواصل معنا اليوم لمناقشة كيف يمكننا دعم احتياجاتك التجارية الدولية.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="btn-primary">
+                اطلب عرض سعر
+              </Button>
+            </Link>
+          </div>
         </section>
       </AnimatedSection>
 
