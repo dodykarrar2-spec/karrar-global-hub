@@ -10,6 +10,7 @@ import { AnimatedSection } from "@/hooks/use-scroll-animation";
 import { ParallaxHero } from "@/hooks/use-parallax";
 import { z } from "zod";
 import heroImage from "@/assets/hero-gum-arabic.png";
+import logo from "@/assets/logo.jpg";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "الاسم مطلوب" }).max(100, { message: "يجب أن يكون الاسم أقل من 100 حرف" }),
@@ -87,6 +88,12 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
         <ParallaxHero image={heroImage} speed={0.3} />
+        <div className="absolute top-10 right-10 opacity-10 z-10">
+          <img src={logo} alt="" className="w-32 h-32 object-contain" />
+        </div>
+        <div className="absolute bottom-6 left-10 opacity-10 z-10">
+          <img src={logo} alt="" className="w-20 h-20 object-contain" />
+        </div>
         <div className="section-container relative z-10">
           <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">تواصل معنا</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
@@ -175,7 +182,11 @@ const Contact = () => {
 
           {/* Contact Form */}
           <AnimatedSection animation="fade-left" delay={200}>
-            <div className="card-elegant">
+            <div className="card-elegant relative overflow-hidden">
+              {/* Subtle logo watermark in form card */}
+              <div className="absolute -bottom-6 -left-6 opacity-[0.04]">
+                <img src={logo} alt="" className="w-40 h-40 object-contain" />
+              </div>
               <h2 className="text-3xl font-bold mb-6">أرسل لنا رسالة</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>

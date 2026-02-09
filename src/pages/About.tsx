@@ -6,6 +6,7 @@ import { ParallaxHero } from "@/hooks/use-parallax";
 import aboutImage from "@/assets/about-global.jpg";
 import chairmanPhoto from "@/assets/chairman-photo.jpg";
 import heroImage from "@/assets/hero-camels.png";
+import logo from "@/assets/logo.jpg";
 
 const About = () => {
   return (
@@ -15,6 +16,13 @@ const About = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 text-primary-foreground overflow-hidden">
         <ParallaxHero image={heroImage} speed={0.3} />
+        {/* Decorative Logo Watermarks */}
+        <div className="absolute top-8 left-8 opacity-10 z-10">
+          <img src={logo} alt="" className="w-28 h-28 object-contain" />
+        </div>
+        <div className="absolute bottom-8 right-8 opacity-10 z-10">
+          <img src={logo} alt="" className="w-20 h-20 object-contain" />
+        </div>
         <div className="section-container relative z-10">
           <h1 className="heading-display text-5xl sm:text-6xl mb-6 text-center">من نحن</h1>
           <p className="text-xl text-center max-w-3xl mx-auto text-primary-foreground/90">
@@ -49,7 +57,11 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="bg-muted py-20">
+      <section className="bg-muted py-20 relative overflow-hidden">
+        {/* Background Logo Watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03]">
+          <img src={logo} alt="" className="w-96 h-96 object-contain" />
+        </div>
         <div className="section-container">
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection animation="fade-up" delay={0}>
@@ -121,8 +133,13 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-container">
+      <section className="section-container relative">
+        {/* Decorative Logo */}
+        <div className="absolute -top-4 right-0 opacity-[0.04]">
+          <img src={logo} alt="" className="w-48 h-48 object-contain" />
+        </div>
         <AnimatedSection animation="fade-up" className="text-center mb-12">
+          <img src={logo} alt="" className="w-12 h-12 mx-auto rounded-full shadow-md border-2 border-primary/20 object-contain mb-4 opacity-60" />
           <h2 className="text-4xl font-bold mb-4">لماذا تشاركنا؟</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             نجلب الخبرة والموثوقية والالتزام بنجاحك
