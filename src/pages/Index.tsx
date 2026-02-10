@@ -15,7 +15,7 @@ import cattleImage from "@/assets/cattle-export.jpg";
 import gumArabicImage from "@/assets/gum-arabic-real.jpg";
 import peanutsImage from "@/assets/peanuts-real.jpg";
 import businessSectorsBg from "@/assets/business-sectors-bg.jpg";
-import heroImage from "@/assets/hero-agricultural.png";
+import heroImage from "@/assets/hero-spices-bg.png";
 
 
 const Index = () => {
