@@ -46,7 +46,7 @@ const Index = () => {
             <img 
               src={logo} 
               alt="أحمد كرار للتجارة" 
-              className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 backdrop-blur-sm animate-float"
+              className="w-24 h-24 sm:w-32 sm:h-32 mx-auto rounded-full shadow-2xl border-4 border-white/30 object-contain bg-white/10 animate-float"
             />
           </div>
           
