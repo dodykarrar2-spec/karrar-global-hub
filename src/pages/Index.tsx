@@ -38,7 +38,7 @@ const Index = () => {
           aria-hidden="true"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 z-[1] bg-primary/70" aria-hidden="true" />
+        <div className="absolute inset-0 z-[1] bg-primary/50" aria-hidden="true" />
         
         <div className="relative z-10 section-container text-center text-white">
           {/* Logo with float animation */}
