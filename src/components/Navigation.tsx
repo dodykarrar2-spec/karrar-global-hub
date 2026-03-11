@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 import logo from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, dir } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +20,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "الرئيسية", path: "/" },
-    { name: "من نحن", path: "/about" },
-    { name: "خدماتنا", path: "/services" },
-    { name: "المنتجات", path: "/products" },
-    { name: "تواصل معنا", path: "/contact" },
+    { name: t("nav.home"), path: "/" },
+    { name: t("nav.about"), path: "/about" },
+    { name: t("nav.services"), path: "/services" },
+    { name: t("nav.products"), path: "/products" },
+    { name: t("nav.contact"), path: "/contact" },
   ];
 
   return (
@@ -29,19 +32,19 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
-      dir="rtl"
+      dir={dir}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <NavLink to="/" className="flex items-center space-x-3 space-x-reverse group">
             <img 
               src={logo} 
-              alt="شعار أحمد كرار للتجارة" 
+              alt={t("nav.companyName")} 
               className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110"
             />
             <div>
-              <div className="text-xl font-bold text-primary">أحمد كرار للتجارة</div>
-              <div className="text-xs text-muted-foreground hidden sm:block">شريكك التجاري العالمي</div>
+              <div className="text-xl font-bold text-primary">{t("nav.companyName")}</div>
+              <div className="text-xs text-muted-foreground hidden sm:block">{t("nav.companySlogan")}</div>
             </div>
           </NavLink>
 
@@ -62,17 +65,22 @@ const Navigation = () => {
                 {link.name}
               </NavLink>
             ))}
+            <div className="mr-2 ml-2">
+              <LanguageToggle />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
       </div>
 
