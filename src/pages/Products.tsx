@@ -65,9 +65,9 @@ const Products = () => {
   ];
 
   const meatProducts = [
-    { image: frozenMeatImage, title: isArabic ? "لحوم مبردة" : "Chilled Meat", titleEn: "Chilled Meat", description: isArabic ? "لحوم طازجة مبردة بأعلى معايير الجودة والنظافة" : "Fresh chilled meat with the highest quality and hygiene standards" },
+    { image: chilledMeatImage, title: isArabic ? "لحوم مبردة" : "Chilled Meat", titleEn: "Chilled Meat", description: isArabic ? "لحوم طازجة مبردة بأعلى معايير الجودة والنظافة" : "Fresh chilled meat with the highest quality and hygiene standards" },
     { image: frozenMeatImage, title: isArabic ? "لحوم مجمدة" : "Frozen Meat", titleEn: "Frozen Meat", description: isArabic ? "لحوم مجمدة للتصدير مع الحفاظ على القيمة الغذائية" : "Frozen meat for export while preserving nutritional value" },
-    { image: frozenMeatImage, title: isArabic ? "لحوم معلبة" : "Canned Meat", titleEn: "Canned Meat", description: isArabic ? "منتجات لحوم معلبة للأسواق المحلية والعالمية" : "Canned meat products for local and global markets" },
+    { image: cannedMeatImage, title: isArabic ? "لحوم معلبة" : "Canned Meat", titleEn: "Canned Meat", description: isArabic ? "منتجات لحوم معلبة للأسواق المحلية والعالمية" : "Canned meat products for local and global markets" },
   ];
 
   const arrowClass = dir === 'rtl' ? 'mr-2 group-hover:-translate-x-1 rotate-180' : 'ml-2 group-hover:translate-x-1';
