@@ -181,6 +181,9 @@ const Index = () => {
       <CertificationsSection />
       <TestimonialsSection />
 
+      {/* Quote Request Form */}
+      <QuoteRequestForm />
+
       {/* CTA Section */}
       <section className="bg-muted py-20 relative overflow-hidden">
         <div className="absolute top-10 left-10 opacity-5">
