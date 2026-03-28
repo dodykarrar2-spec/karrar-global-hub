@@ -9,6 +9,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import OfficesSection from "@/components/OfficesSection";
 import CertificationsSection from "@/components/CertificationsSection";
+import QuoteRequestForm from "@/components/QuoteRequestForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -179,6 +180,9 @@ const Index = () => {
 
       <CertificationsSection />
       <TestimonialsSection />
+
+      {/* Quote Request Form */}
+      <QuoteRequestForm />
 
       {/* CTA Section */}
       <section className="bg-muted py-20 relative overflow-hidden">
