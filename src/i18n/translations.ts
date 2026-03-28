@@ -207,6 +207,18 @@ export const translations: Record<string, Record<string, string>> = {
     "contact.validationError": "خطأ في التحقق",
     "contact.error": "خطأ",
     "contact.errorDesc": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+
+    // Certifications
+    "cert.title": "شهادات الجودة والاعتمادات الدولية",
+    "cert.description": "نلتزم بأعلى معايير الجودة العالمية لضمان تقديم منتجات وخدمات تلبي توقعات شركائنا في جميع أنحاء العالم",
+    "cert.iso9001": "نظام إدارة الجودة",
+    "cert.haccp": "سلامة الغذاء",
+    "cert.halal": "ذبح حلال معتمد",
+    "cert.halal.name": "حلال",
+    "cert.iso22000": "إدارة سلامة الغذاء",
+    "cert.gmp": "ممارسات التصنيع الجيد",
+    "cert.organic": "منتجات عضوية معتمدة",
+    "cert.organic.name": "عضوي",
   },
   en: {
     // Navigation
