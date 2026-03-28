@@ -177,6 +177,7 @@ const Index = () => {
         </div>
       </section>
 
+      <CertificationsSection />
       <TestimonialsSection />
 
       {/* CTA Section */}
