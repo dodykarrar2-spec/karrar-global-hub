@@ -8,6 +8,7 @@ import StatisticsSection from "@/components/StatisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PartnersMarquee from "@/components/PartnersMarquee";
 import OfficesSection from "@/components/OfficesSection";
+import CertificationsSection from "@/components/CertificationsSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/logo.jpg";
 import sheepImage from "@/assets/sheep-export.jpg";
@@ -176,6 +177,7 @@ const Index = () => {
         </div>
       </section>
 
+      <CertificationsSection />
       <TestimonialsSection />
 
       {/* CTA Section */}

@@ -207,6 +207,18 @@ export const translations: Record<string, Record<string, string>> = {
     "contact.validationError": "خطأ في التحقق",
     "contact.error": "خطأ",
     "contact.errorDesc": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+
+    // Certifications
+    "cert.title": "شهادات الجودة والاعتمادات الدولية",
+    "cert.description": "نلتزم بأعلى معايير الجودة العالمية لضمان تقديم منتجات وخدمات تلبي توقعات شركائنا في جميع أنحاء العالم",
+    "cert.iso9001": "نظام إدارة الجودة",
+    "cert.haccp": "سلامة الغذاء",
+    "cert.halal": "ذبح حلال معتمد",
+    "cert.halal.name": "حلال",
+    "cert.iso22000": "إدارة سلامة الغذاء",
+    "cert.gmp": "ممارسات التصنيع الجيد",
+    "cert.organic": "منتجات عضوية معتمدة",
+    "cert.organic.name": "عضوي",
   },
   en: {
     // Navigation
@@ -416,5 +428,17 @@ export const translations: Record<string, Record<string, string>> = {
     "contact.validationError": "Validation Error",
     "contact.error": "Error",
     "contact.errorDesc": "Something went wrong. Please try again.",
+
+    // Certifications
+    "cert.title": "Quality Certifications & Accreditations",
+    "cert.description": "We adhere to the highest international quality standards to ensure our products and services meet the expectations of our partners worldwide",
+    "cert.iso9001": "Quality Management System",
+    "cert.haccp": "Food Safety System",
+    "cert.halal": "Certified Halal Slaughter",
+    "cert.halal.name": "Halal",
+    "cert.iso22000": "Food Safety Management",
+    "cert.gmp": "Good Manufacturing Practice",
+    "cert.organic": "Certified Organic Products",
+    "cert.organic.name": "Organic",
   },
 };
